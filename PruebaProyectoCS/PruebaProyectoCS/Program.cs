@@ -15,6 +15,8 @@ namespace PruebaProyectoCS
 
             nose.NoSeWe();
 
+            Console.WriteLine("ALABASTRUKA");
+
             Console.ReadKey();
         }
     }

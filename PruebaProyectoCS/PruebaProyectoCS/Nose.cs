@@ -11,8 +11,6 @@ namespace PruebaProyectoCS
         public void NoSeWe()
         {
             Console.WriteLine("Putos todos");
-
-            Console.ReadKey();
         }
     }
 }
