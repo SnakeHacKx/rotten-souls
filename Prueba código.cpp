@@ -8,6 +8,8 @@ int main()
 {
 	int numero, dato, contador = 0;
 
+	//hola wey
+
 	srand(time(NULL)); //generar un numero aleatorio entre 1-100
 
 	dato = 1 + rand() % (101 - 1);
