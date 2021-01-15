@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("soy imbécil");
+        Debug.Log("BUENAS TARDES");
     }
 
     // Update is called once per frame
