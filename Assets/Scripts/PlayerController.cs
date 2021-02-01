@@ -1,47 +1,62 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Animator))]
 
 public class PlayerController : MonoBehaviour
 {
-	public float longIdleTime = 5f;
-	public float speed = 2.5f;
-	public float jumpForce = 2.5f;
+    [SerializeField]
+    [Tooltip("Tiempo que tardará en hacer la animación del Long Iddle")]
+    private float longIdleTime = 5f;
 
-	public Transform groundCheck;
-	public LayerMask groundLayer;
-	public float groundCheckRadius;
+    [SerializeField]
+    [Tooltip("Velocidad de movimiento en el eje X")]
+    private float speed = 2.5f;
+    
+    [SerializeField]
+    [Tooltip("Fuerza de impulso al saltar")]
+    private float jumpForce = 2.5f;
 
-	// References
-	private Rigidbody2D _rigidbody;
-	private Animator _animator;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+    public float groundCheckRadius;
 
-	// Long Idle
-	private float _longIdleTimer;
+    // References
+    private Rigidbody2D _rigidbody;
+    private Animator _animator;
 
-	// Movement
-	private Vector2 _movement;
-	private bool _facingRight = true;
-	private bool _isGrounded;
+    // Long Idle
+    private float _longIdleTimer;
 
-	// Attack
-	private bool _isAttacking;
+    // Movement
+    private Vector2 _movement;
+    private bool _facingRight = true;
 
+    // Jump
+    private bool _isGrounded;
+    private float jumpTimeCounter;
 
-	void Awake()
-	{
-		_rigidbody = GetComponent<Rigidbody2D>();
-		_animator = GetComponent<Animator>();
-	}
+    [SerializeField]
+    [Tooltip("Tiempo máximo en el que será válido que el usuario presione el botón de saltar")]
+    private float jumpTime;
+    private bool isJumping;
 
-	void Start()
+    // Attack
+    private bool _isAttacking;
+
+    private void Awake()
     {
-        
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
-    void Update()
+    private void Start()
     {
-		if (_isAttacking == false) {
+    }
+
+    private void Update()
+    {
+        /*if (_isAttacking == false) {
 			// Movement
 			float horizontalInput = Input.GetAxisRaw("Horizontal");
 			_movement = new Vector2(horizontalInput, 0f);
@@ -52,62 +67,125 @@ public class PlayerController : MonoBehaviour
 			} else if (horizontalInput > 0f && _facingRight == false) {
 				Flip();
 			}
-		}
+		}*/
 
-		// Is Grounded?
-		_isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        // Is Grounded?
+        _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-		// Is Jumping?
-		if (Input.GetButtonDown("Jump") && _isGrounded == true && _isAttacking == false) {
-			_rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-		}
+        // Is Jumping?
+        if (Input.GetButtonDown("Jump") && _isGrounded == true && _isAttacking == false)
+        {
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
 
-		// Wanna Attack?
-		if (Input.GetKeyDown(KeyCode.Mouse0) && _isAttacking == false) {
-			_movement = Vector2.zero;
-			_rigidbody.velocity = Vector2.zero;
-			_animator.SetTrigger("Attack");
-		}
-	}
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if(jumpTimeCounter > 0 && isJumping == true)
+            {
+                _rigidbody.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
+        }
 
-	void FixedUpdate()
-	{
-		if (_isAttacking == false) {
-			float horizontalVelocity = _movement.normalized.x * speed;
-			_rigidbody.velocity = new Vector2(horizontalVelocity, _rigidbody.velocity.y);
-		}
-	}
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            isJumping = false;
+        }
 
-	void LateUpdate()
-	{
-		_animator.SetBool("Idle", _movement == Vector2.zero);
-		_animator.SetBool("IsGrounded", _isGrounded);
-		_animator.SetFloat("VerticalVelocity", _rigidbody.velocity.y);
+        // Wanna Attack?
+        if (Input.GetKeyDown(KeyCode.Mouse0) && _isAttacking == false)
+        {
+            _movement = Vector2.zero;
+            _rigidbody.velocity = Vector2.zero;
+            _animator.SetTrigger("Attack");
+        }
+    }
 
-		// Animator
-		if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
-			_isAttacking = true;
-		} else {
-			_isAttacking = false;
-		}
+    private void FixedUpdate()
+    {
+        if (_isAttacking == false)
+        {
+            float horizontalVelocity = _movement.normalized.x * speed;
+            _rigidbody.velocity = new Vector2(horizontalVelocity, _rigidbody.velocity.y);
+        }
 
-		// Long Idle
-		if (_movement == Vector2.zero&&_isGrounded == true) {
-			_longIdleTimer += Time.deltaTime;
+        if (_isAttacking == false)
+        {
+            // Movement
+            float horizontalInput = Input.GetAxisRaw("Horizontal");
+            _movement = new Vector2(horizontalInput, 0f);
 
-			if (_longIdleTimer >= longIdleTime) {
-				_animator.SetTrigger("LongIdle");
-			}
-		} else {
-			_longIdleTimer = 0f;
-		}
-	}
+            // Flip character
+            if (horizontalInput < 0f && _facingRight == true)
+            {
+                Flip();
+            }
+            else if (horizontalInput > 0f && _facingRight == false)
+            {
+                Flip();
+            }
+        }
 
-	private void Flip()
-	{
-		_facingRight = !_facingRight;
-		float localScaleX = transform.localScale.x;
-		localScaleX = localScaleX * -1f;
-		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
-	}
+        // To Jump
+        /*if (Input.GetKey(KeyCode.Space))
+        {
+            if(jumpTimeCounter > 0 && isJumping == true)
+            {
+                // Bug: Esta línea me fuerza a ir para arriba, no dejándome
+                // avanzar mientras salto
+                _rigidbody.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
+        }*/
+    }
+
+    private void LateUpdate()
+    {
+        _animator.SetBool("Idle", _movement == Vector2.zero);
+        _animator.SetBool("IsGrounded", _isGrounded);
+        _animator.SetFloat("VerticalVelocity", _rigidbody.velocity.y);
+
+        // Animator
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        {
+            _isAttacking = true;
+        }
+        else
+        {
+            _isAttacking = false;
+        }
+
+        // Long Idle
+        if (_movement == Vector2.zero && _isGrounded == true)
+        {
+            _longIdleTimer += Time.deltaTime;
+
+            if (_longIdleTimer >= longIdleTime)
+            {
+                _animator.SetTrigger("LongIdle");
+            }
+        }
+        else
+        {
+            _longIdleTimer = 0f;
+        }
+    }
+
+    private void Flip()
+    {
+        _facingRight = !_facingRight;
+        float localScaleX = transform.localScale.x;
+        localScaleX = localScaleX * -1f;
+        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
+    }
 }
