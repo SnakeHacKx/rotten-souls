@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class fix : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Prueba Visual Studio Code");
+        
     }
 
-    /*private void Update()
+    // Update is called once per frame
+    void Update()
     {
         
-    }*/
+    }
 }
