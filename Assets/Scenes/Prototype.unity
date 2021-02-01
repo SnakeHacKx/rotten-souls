@@ -272,7 +272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142091627}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3812563, y: -0.6430131, z: -8.821411}
+  m_LocalPosition: {x: 1.1722524, y: -0.6448214, z: -8.821411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2018346851}
@@ -450,12 +450,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longIdleTime: 5
   speed: 2.5
-  jumpForce: 5
+  jumpForce: 3
   groundCheck: {fileID: 5049537}
   groundLayer:
     serializedVersion: 2
     m_Bits: 512
   groundCheckRadius: 0.025
+  jumpTime: 0.35
 --- !u!95 &142460384
 Animator:
   serializedVersion: 3
