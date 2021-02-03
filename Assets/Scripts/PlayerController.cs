@@ -43,6 +43,10 @@ public class PlayerController : MonoBehaviour
 
     // Attack
     private bool _isAttacking;
+    //[SerializeField]
+    //[Tooltip("Número de ataques máximo que puede hacer el player en el aire")]
+    //private int maxAttacksOnAir = 1;
+    //private int attacksOnAir;
 
     private void Awake()
     {
@@ -52,6 +56,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        // attacksOnAir = 0;
     }
 
     private void Update()
@@ -78,6 +83,7 @@ public class PlayerController : MonoBehaviour
             isJumping = true;
             jumpTimeCounter = jumpTime;
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            //attacksOnAir = 0;
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -99,7 +105,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Wanna Attack?
-        if (Input.GetKeyDown(KeyCode.Mouse0) && _isAttacking == false)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && _isAttacking == false /*&& attacksOnAir <= maxAttacksOnAir*/)
         {
             _movement = Vector2.zero;
             _rigidbody.velocity = Vector2.zero;
