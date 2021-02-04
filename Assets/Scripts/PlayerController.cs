@@ -137,22 +137,6 @@ public class PlayerController : MonoBehaviour
                 Flip();
             }
         }
-
-        // To Jump
-        /*if (Input.GetKey(KeyCode.Space))
-        {
-            if(jumpTimeCounter > 0 && isJumping == true)
-            {
-                // Bug: Esta línea me fuerza a ir para arriba, no dejándome
-                // avanzar mientras salto
-                _rigidbody.velocity = Vector2.up * jumpForce;
-                jumpTimeCounter -= Time.deltaTime;
-            }
-            else
-            {
-                isJumping = false;
-            }
-        }*/
     }
 
     private void LateUpdate()

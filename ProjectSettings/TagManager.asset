@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - Scenario
-  - Ground
+  - 
+  - 
   - 
   - 
   - 
@@ -38,15 +38,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 1893468487
-    locked: 0
-  - name: Middleground
-    uniqueID: 970643907
-    locked: 0
-  - name: Scenario
-    uniqueID: 3248144795
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
