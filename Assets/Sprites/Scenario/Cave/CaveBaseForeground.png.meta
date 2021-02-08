@@ -1,0 +1,830 @@
+fileFormatVersion: 2
+guid: d2804be567ec3d4419a11e2257b51312
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5080076132918479789
+    second: CaveBaseForeground_0
+  - first:
+      213: 6250133677466238575
+    second: CaveBaseForeground_1
+  - first:
+      213: -3154001704400108510
+    second: CaveBaseForeground_2
+  - first:
+      213: 5333064220661606038
+    second: CaveBaseForeground_3
+  - first:
+      213: -4452197802703097258
+    second: CaveBaseForeground_4
+  - first:
+      213: -8685197001643658328
+    second: CaveBaseForeground_5
+  - first:
+      213: 8690053652689885138
+    second: CaveBaseForeground_6
+  - first:
+      213: 5008404058277695717
+    second: CaveBaseForeground_7
+  - first:
+      213: -4115739390489942710
+    second: CaveBaseForeground_8
+  - first:
+      213: -8328594738159235102
+    second: CaveBaseForeground_9
+  - first:
+      213: -2284863946349406323
+    second: CaveBaseForeground_10
+  - first:
+      213: 4022101842147121837
+    second: CaveBaseForeground_11
+  - first:
+      213: 8460261942747809188
+    second: CaveBaseForeground_12
+  - first:
+      213: 1388816506320394785
+    second: CaveBaseForeground_13
+  - first:
+      213: 2485930840774630343
+    second: CaveBaseForeground_14
+  - first:
+      213: 7905886802822110795
+    second: CaveBaseForeground_15
+  - first:
+      213: -3347085099220282573
+    second: CaveBaseForeground_16
+  - first:
+      213: -5795470283833789738
+    second: CaveBaseForeground_17
+  - first:
+      213: 3990143003960873919
+    second: CaveBaseForeground_18
+  - first:
+      213: 9069210270822897232
+    second: CaveBaseForeground_19
+  - first:
+      213: -1675739980484280177
+    second: CaveBaseForeground_20
+  - first:
+      213: -8133564978471035195
+    second: CaveBaseForeground_21
+  - first:
+      213: -6621644495140131222
+    second: CaveBaseForeground_22
+  - first:
+      213: 3716303996948037352
+    second: CaveBaseForeground_23
+  - first:
+      213: -5143341727960607356
+    second: CaveBaseForeground_24
+  - first:
+      213: 3977107914383868927
+    second: CaveBaseForeground_25
+  - first:
+      213: -2436295319636688729
+    second: CaveBaseForeground_26
+  - first:
+      213: -707634145585443052
+    second: CaveBaseForeground_27
+  - first:
+      213: -7030013478083924671
+    second: CaveBaseForeground_28
+  - first:
+      213: -7352141333343447646
+    second: CaveBaseForeground_29
+  - first:
+      213: -1295804724727273866
+    second: CaveBaseForeground_30
+  - first:
+      213: -7604920238099990205
+    second: CaveBaseForeground_31
+  - first:
+      213: 3583028974036862025
+    second: CaveBaseForeground_32
+  - first:
+      213: 5510451748974226380
+    second: CaveBaseForeground_33
+  - first:
+      213: -8100424255658106083
+    second: CaveBaseForeground_34
+  - first:
+      213: 1792397266381782635
+    second: CaveBaseForeground_35
+  - first:
+      213: 6392161190502129449
+    second: CaveBaseForeground_36
+  - first:
+      213: 4542875933029961017
+    second: CaveBaseForeground_37
+  - first:
+      213: 6930300871009232134
+    second: CaveBaseForeground_38
+  - first:
+      213: 3191856918628980860
+    second: CaveBaseForeground_39
+  - first:
+      213: 8716870180629897095
+    second: CaveBaseForeground_40
+  - first:
+      213: -6441709781463926620
+    second: CaveBaseForeground_41
+  - first:
+      213: 734192658104641068
+    second: CaveBaseForeground_42
+  - first:
+      213: 1327660746874372865
+    second: CaveBaseForeground_43
+  - first:
+      213: 1203756918556373673
+    second: CaveBaseForeground_44
+  - first:
+      213: 4668902135133960586
+    second: CaveBaseForeground_45
+  - first:
+      213: -1722003756844488929
+    second: CaveBaseForeground_46
+  - first:
+      213: -7938320627897152170
+    second: CaveBaseForeground_47
+  - first:
+      213: -4972685675775910643
+    second: CaveBaseForeground_48
+  - first:
+      213: -1350280647290749909
+    second: CaveBaseForeground_49
+  - first:
+      213: -7414382266630971842
+    second: CaveBaseForeground_50
+  - first:
+      213: -1986262634738634159
+    second: CaveBaseForeground_51
+  - first:
+      213: 2063806508456957813
+    second: CaveBaseForeground_52
+  - first:
+      213: 5774907468510177221
+    second: CaveBaseForeground_53
+  - first:
+      213: -7693710938603102728
+    second: CaveBaseForeground_54
+  - first:
+      213: -5613545549342318394
+    second: CaveBaseForeground_55
+  - first:
+      213: 9018162540552069928
+    second: CaveBaseForeground_56
+  - first:
+      213: 5097201813624048751
+    second: CaveBaseForeground_57
+  - first:
+      213: 3083755235085390913
+    second: CaveBaseForeground_58
+  - first:
+      213: -4687137191750633255
+    second: CaveBaseForeground_59
+  - first:
+      213: 6128810239153130324
+    second: CaveBaseForeground_60
+  - first:
+      213: -4334430273149954352
+    second: CaveBaseForeground_61
+  - first:
+      213: 6589313032934117376
+    second: CaveBaseForeground_62
+  - first:
+      213: 6554818799131793148
+    second: CaveBaseForeground_63
+  - first:
+      213: 1118968630606190457
+    second: CaveBaseForeground_64
+  - first:
+      213: 3798623862694162779
+    second: CaveBaseForeground_65
+  - first:
+      213: 225290669225621894
+    second: CaveBaseForeground_66
+  - first:
+      213: -8787028954581387567
+    second: CaveBaseForeground_67
+  - first:
+      213: 6065914754262707189
+    second: CaveBaseForeground_68
+  - first:
+      213: -2704855924065520299
+    second: CaveBaseForeground_69
+  - first:
+      213: 6584841908563279943
+    second: CaveBaseForeground_70
+  - first:
+      213: -1368692538535655233
+    second: CaveBaseForeground_71
+  - first:
+      213: -1892099703953694273
+    second: CaveBaseForeground_72
+  - first:
+      213: -3374721462758638292
+    second: CaveBaseForeground_73
+  - first:
+      213: -6916088161865378575
+    second: CaveBaseForeground_74
+  - first:
+      213: 196788464789479821
+    second: CaveBaseForeground_75
+  - first:
+      213: 1362662612671790785
+    second: CaveBaseForeground_76
+  - first:
+      213: -5327636034336413597
+    second: CaveBaseForeground_77
+  - first:
+      213: -7244136925414974621
+    second: CaveBaseForeground_78
+  - first:
+      213: 2760655895035583197
+    second: CaveBaseForeground_79
+  - first:
+      213: -3489575902525108699
+    second: CaveBaseForeground_80
+  - first:
+      213: -5650374658847509919
+    second: CaveBaseForeground_81
+  - first:
+      213: -6835708906817688875
+    second: CaveBaseForeground_82
+  - first:
+      213: 1314352845828049594
+    second: CaveBaseForeground_83
+  - first:
+      213: 3747597725814034344
+    second: CaveBaseForeground_84
+  - first:
+      213: 5562705398133162176
+    second: CaveBaseForeground_85
+  - first:
+      213: 5638559010308893431
+    second: CaveBaseForeground_86
+  - first:
+      213: 4407753940123462636
+    second: CaveBaseForeground_87
+  - first:
+      213: 615436282454543542
+    second: CaveBaseForeground_88
+  - first:
+      213: 527569028018511855
+    second: CaveBaseForeground_89
+  - first:
+      213: -3736572348342910570
+    second: CaveBaseForeground_90
+  - first:
+      213: 5819996996060937733
+    second: CaveBaseForeground_91
+  - first:
+      213: 6278977655955998574
+    second: CaveBaseForeground_92
+  - first:
+      213: -6707112381166802395
+    second: CaveBaseForeground_93
+  - first:
+      213: -3308147714247306079
+    second: CaveBaseForeground_94
+  - first:
+      213: -5603767004929977456
+    second: CaveBaseForeground_95
+  - first:
+      213: -6404326820983223960
+    second: CaveBaseForeground_96
+  - first:
+      213: -1249457122616049791
+    second: CaveBaseForeground_97
+  - first:
+      213: 8667124451019785169
+    second: CaveBaseForeground_98
+  - first:
+      213: -8833669823349364786
+    second: CaveBaseForeground_99
+  - first:
+      213: -8400352701691403927
+    second: CaveBaseForeground_100
+  - first:
+      213: -6498895685614982632
+    second: CaveBaseForeground_101
+  - first:
+      213: 2200331022080528015
+    second: CaveBaseForeground_102
+  - first:
+      213: -4283815463085077690
+    second: CaveBaseForeground_103
+  - first:
+      213: -36575254575468178
+    second: CaveBaseForeground_104
+  - first:
+      213: -125730127161173410
+    second: CaveBaseForeground_105
+  - first:
+      213: -4346121266149050903
+    second: CaveBaseForeground_106
+  - first:
+      213: 6551696410511954842
+    second: CaveBaseForeground_107
+  - first:
+      213: 6117902964325340255
+    second: CaveBaseForeground_108
+  - first:
+      213: -1389415164694492952
+    second: CaveBaseForeground_109
+  - first:
+      213: 405149484402375883
+    second: CaveBaseForeground_110
+  - first:
+      213: 7135352075436957720
+    second: CaveBaseForeground_111
+  - first:
+      213: -2401264338038199845
+    second: CaveBaseForeground_112
+  - first:
+      213: 1707806045559060402
+    second: CaveBaseForeground_113
+  - first:
+      213: -8591874706303801133
+    second: CaveBaseForeground_114
+  - first:
+      213: 4313947637560616199
+    second: CaveBaseForeground_115
+  - first:
+      213: -957490567389026999
+    second: CaveBaseForeground_116
+  - first:
+      213: 173366229369171299
+    second: CaveBaseForeground_117
+  - first:
+      213: -2910248628291317522
+    second: CaveBaseForeground_118
+  - first:
+      213: -7345284935090064990
+    second: CaveBaseForeground_119
+  - first:
+      213: -8284525075086081421
+    second: CaveBaseForeground_120
+  - first:
+      213: 8074347113114587691
+    second: CaveBaseForeground_121
+  - first:
+      213: 1310186548485301323
+    second: CaveBaseForeground_122
+  - first:
+      213: -8240968416493491146
+    second: CaveBaseForeground_123
+  - first:
+      213: -6930931695973213369
+    second: CaveBaseForeground_124
+  - first:
+      213: 3885491001243211560
+    second: CaveBaseForeground_125
+  - first:
+      213: 4363766296353499842
+    second: CaveBaseForeground_126
+  - first:
+      213: 6240363932957079632
+    second: CaveBaseForeground_127
+  - first:
+      213: -5200699954970565177
+    second: CaveBaseForeground_128
+  - first:
+      213: 1315092308265019227
+    second: CaveBaseForeground_129
+  - first:
+      213: 7360230363533114618
+    second: CaveBaseForeground_130
+  - first:
+      213: 8711196576073841573
+    second: CaveBaseForeground_131
+  - first:
+      213: -7888818356997696317
+    second: CaveBaseForeground_132
+  - first:
+      213: -7132585957028098419
+    second: CaveBaseForeground_133
+  - first:
+      213: -7096169788671398508
+    second: CaveBaseForeground_134
+  - first:
+      213: 4630962976096805144
+    second: CaveBaseForeground_135
+  - first:
+      213: -2192833748843287947
+    second: CaveBaseForeground_136
+  - first:
+      213: 8118915059094410716
+    second: CaveBaseForeground_137
+  - first:
+      213: 2025995562580459950
+    second: CaveBaseForeground_138
+  - first:
+      213: -6462827307919887178
+    second: CaveBaseForeground_139
+  - first:
+      213: -1806692467335894616
+    second: CaveBaseForeground_140
+  - first:
+      213: 4871103954150593313
+    second: CaveBaseForeground_141
+  - first:
+      213: -6804389168319017386
+    second: CaveBaseForeground_142
+  - first:
+      213: 5262241556626606906
+    second: CaveBaseForeground_143
+  - first:
+      213: 3478130036931539669
+    second: CaveBaseForeground_144
+  - first:
+      213: 3480353507778998826
+    second: CaveBaseForeground_145
+  - first:
+      213: -9080582991257447689
+    second: CaveBaseForeground_146
+  - first:
+      213: -7175178061395656058
+    second: CaveBaseForeground_147
+  - first:
+      213: -3843592596202821829
+    second: CaveBaseForeground_148
+  - first:
+      213: -8883383886185332496
+    second: CaveBaseForeground_149
+  - first:
+      213: -4771636342024987464
+    second: CaveBaseForeground_150
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CaveBaseForeground_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 545
+        width: 288
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35434792ca1ff79b0800000000000000
+      internalID: -5080076132918479789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBaseForeground_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 96
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6eb41c077fecb650800000000000000
+      internalID: 6250133677466238575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBaseForeground_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 435
+        width: 384
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2244144192cba34d0800000000000000
+      internalID: -3154001704400108510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBaseForeground_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69661e427a9d20a40800000000000000
+      internalID: 5333064220661606038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBaseForeground_4
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 352
+        width: 153
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6527b1cefad9632c0800000000000000
+      internalID: -4452197802703097258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBaseForeground_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3fdb8d75bf77780800000000000000
+      internalID: -8685197001643658328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBaseForeground_6
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 160
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d79aa751c5499870800000000000000
+      internalID: 8690053652689885138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBaseForeground_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 159
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0544194fc618540800000000000000
+      internalID: 5008404058277695717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBaseForeground_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 525
+        width: 160
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45a3c994d4f1e6c0800000000000000
+      internalID: -4115739390489942710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBaseForeground_9
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 608
+        width: 73
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efc4d16633ea6c80800000000000000
+      internalID: -8328594738159235102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBaseForeground_10
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 608
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d871fb5b8588a40e0800000000000000
+      internalID: -2284863946349406323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBaseForeground_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 610
+        width: 128
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa9f9fb05061d730800000000000000
+      internalID: 4022101842147121837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveBaseForeground_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 300
+        width: 160
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a54d3c9963e86570800000000000000
+      internalID: 8460261942747809188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
