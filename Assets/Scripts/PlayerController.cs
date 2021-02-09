@@ -5,6 +5,10 @@
 
 public class PlayerController : MonoBehaviour
 {
+    // Permite saber a todo el programa que el jugador ya ha sido creado, esto
+    // para que al cargar más de una escena, no se creen clones de este
+    public static bool playerCreated;
+
     [SerializeField]
     [Tooltip("Tiempo que tardará en hacer la animación del Long Iddle")]
     private float longIdleTime = 5f;
@@ -43,10 +47,9 @@ public class PlayerController : MonoBehaviour
 
     // Attack
     private bool _isAttacking;
-    //[SerializeField]
-    //[Tooltip("Número de ataques máximo que puede hacer el player en el aire")]
-    //private int maxAttacksOnAir = 1;
-    //private int attacksOnAir;
+
+    public Vector2 lastMovement = Vector2.zero;
+    private const string AXIS_H = "Horizontal", WALK = "Walking";
 
     private void Awake()
     {
@@ -56,7 +59,11 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        // attacksOnAir = 0;
+        // Si no se ha creado el jugador, se crea
+        if (!playerCreated)
+        {
+            playerCreated = true;
+        }
     }
 
     private void Update()
@@ -109,7 +116,7 @@ public class PlayerController : MonoBehaviour
         {
             _movement = Vector2.zero;
             _rigidbody.velocity = Vector2.zero;
-            _animator.SetTrigger("Attack");
+            _animator.SetTrigger("Attacking");
         }
     }
 
@@ -146,7 +153,7 @@ public class PlayerController : MonoBehaviour
         _animator.SetFloat("VerticalVelocity", _rigidbody.velocity.y);
 
         // Animator
-        if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attacking"))
         {
             _isAttacking = true;
         }
