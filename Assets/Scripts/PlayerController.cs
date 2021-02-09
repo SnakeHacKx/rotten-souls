@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
         if (_isAttacking == false)
         {
             // Movement
-            float horizontalInput = Input.GetAxisRaw("Horizontal");
+            float horizontalInput = Input.GetAxisRaw(AXIS_H);
             _movement = new Vector2(horizontalInput, 0f);
 
             // Flip character
@@ -151,6 +151,7 @@ public class PlayerController : MonoBehaviour
         _animator.SetBool("Idle", _movement == Vector2.zero);
         _animator.SetBool("IsGrounded", _isGrounded);
         _animator.SetFloat("VerticalVelocity", _rigidbody.velocity.y);
+        _animator.SetFloat(AXIS_H, Input.GetAxisRaw(AXIS_H));
 
         // Animator
         if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attacking"))
