@@ -9,7 +9,14 @@ public class GoToNewPlace : MonoBehaviour
     [SerializeField]
     private string newPlaceName = "New Scene Name Here!!!";
 
+    [SerializeField]
+    [Tooltip("¿Necesita el jugador pulsar la tecla E para irse a un nuevo lugar?")]
+    private bool needsClick;
+
     private SetCameraConfiner _setCameraConfiner;
+
+    // identificador del start point al cual se quiere ir
+    public string uuid;
 
     private void Start()
     {
@@ -17,14 +24,30 @@ public class GoToNewPlace : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
+    {        
+        Teleport(collision.gameObject.tag);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Teleport(collision.gameObject.tag);
+    }
+
+    private void Teleport(string objectTag)
     {
         // Si el tag del gameObject que entra en collision con el collider que tenga
         // este script es "Player", entonces cargo una nueva escena
-        if (collision.gameObject.CompareTag("Player")/* && Input.GetKeyDown(KeyCode.E)*/)
+        if (objectTag == "Player")
         {
-            
-            SceneManager.LoadScene(newPlaceName);
-            _setCameraConfiner.SetCameraBoundary();
-        }
+            if (!needsClick || (needsClick && Input.GetKeyDown(KeyCode.E)))
+            {
+                // indica que el siguiente punto de teletransporte es el que se le ha
+                // puesto al GoToNewPlace
+                FindObjectOfType<PlayerController>().nextUuid = uuid;
+
+                SceneManager.LoadScene(newPlaceName);
+                //_setCameraConfiner.SetCameraBoundary();
+            }
+        }     
     }
 }

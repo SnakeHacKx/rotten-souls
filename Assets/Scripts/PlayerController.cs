@@ -49,7 +49,10 @@ public class PlayerController : MonoBehaviour
     private bool _isAttacking;
 
     public Vector2 lastMovement = Vector2.zero;
-    private const string AXIS_H = "Horizontal", WALK = "Walking";
+    private const string AXIS_H = "Horizontal", AXIS_V = "VerticalVelocity";
+
+    // guarda la referencia del siguiente lugar al que se quiere ir
+    public string nextUuid;
 
     private void Awake()
     {
@@ -59,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        // Si no se ha creado el jugador, se crea
+        // Si no se ha creado el jugador, "se crea"
         if (!playerCreated)
         {
             playerCreated = true;
@@ -150,7 +153,7 @@ public class PlayerController : MonoBehaviour
     {
         _animator.SetBool("Idle", _movement == Vector2.zero);
         _animator.SetBool("IsGrounded", _isGrounded);
-        _animator.SetFloat("VerticalVelocity", _rigidbody.velocity.y);
+        _animator.SetFloat(AXIS_V, _rigidbody.velocity.y);
         _animator.SetFloat(AXIS_H, Input.GetAxisRaw(AXIS_H));
 
         // Animator
