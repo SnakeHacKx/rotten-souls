@@ -2,12 +2,15 @@
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
-
+[RequireComponent(typeof(LayerMask))]
+[RequireComponent(typeof(Transform))]
 public class PlayerController : MonoBehaviour
 {
     // Permite saber a todo el programa que el jugador ya ha sido creado, esto
     // para que al cargar más de una escena, no se creen clones de este
     public static bool playerCreated;
+
+    public bool isTalking;
 
     [SerializeField]
     [Tooltip("Tiempo que tardará en hacer la animación del Long Iddle")]
@@ -67,23 +70,12 @@ public class PlayerController : MonoBehaviour
         {
             playerCreated = true;
         }
+
+        isTalking = false;
     }
 
     private void Update()
     {
-        /*if (_isAttacking == false) {
-			// Movement
-			float horizontalInput = Input.GetAxisRaw("Horizontal");
-			_movement = new Vector2(horizontalInput, 0f);
-
-			// Flip character
-			if (horizontalInput < 0f && _facingRight == true) {
-				Flip();
-			} else if (horizontalInput > 0f && _facingRight == false) {
-				Flip();
-			}
-		}*/
-
         // Is Grounded?
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
@@ -93,7 +85,6 @@ public class PlayerController : MonoBehaviour
             isJumping = true;
             jumpTimeCounter = jumpTime;
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            //attacksOnAir = 0;
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -125,6 +116,12 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isTalking)
+        {
+            _rigidbody.velocity = Vector2.zero;
+            return;
+        }
+
         if (_isAttacking == false)
         {
             float horizontalVelocity = _movement.normalized.x * speed;
