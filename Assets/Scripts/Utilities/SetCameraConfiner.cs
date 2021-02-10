@@ -15,6 +15,5 @@ public class SetCameraConfiner : MonoBehaviour
         confiner.InvalidatePathCache();
         
         confiner.m_BoundingShape2D = GameObject.FindGameObjectWithTag("MyNewConfiner").GetComponent<Collider2D>();
-        Debug.Log("El script ha sido convocado");
     }
 }

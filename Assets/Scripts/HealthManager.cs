@@ -5,11 +5,11 @@ using UnityEngine;
 public class HealthManager : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("Vida máxima del jugador")]
+    [Tooltip("Vida máxima")]
     private int maxHealth;
 
     [SerializeField]
-    [Tooltip("Vida actual del jugador")]
+    [Tooltip("Vida actual")]
     private int currentHealth;
     
 
