@@ -30,5 +30,6 @@ public class DamageNumber : MonoBehaviour
 
         //this.transform.localScale = this.transform.localScale * (1 - Time.deltaTime);
         damageText.alpha *= (1 - Time.deltaTime * 3);
+
     }
 }
