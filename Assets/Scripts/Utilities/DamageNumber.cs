@@ -16,6 +16,9 @@ public class DamageNumber : MonoBehaviour
     [SerializeField]
     private TMP_Text damageText;
 
+    public float GetDamagePoints { get { return damagePoints; } }
+    public float SetDamagePoints { set { damagePoints = value; } }
+
     void Update()
     {
         damageText.text = damagePoints.ToString();
