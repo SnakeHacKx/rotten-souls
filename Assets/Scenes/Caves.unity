@@ -2922,11 +2922,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: skeleton
       objectReference: {fileID: 0}
-    - target: {fileID: 662574234659321854, guid: ca70db693880bdd4fa48f4b2d1810238,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca70db693880bdd4fa48f4b2d1810238, type: 3}
 --- !u!1 &619578552
@@ -8782,12 +8777,12 @@ PrefabInstance:
     - target: {fileID: 662574234659321827, guid: ca70db693880bdd4fa48f4b2d1810238,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.957
+      value: -3.15
       objectReference: {fileID: 0}
     - target: {fileID: 662574234659321827, guid: ca70db693880bdd4fa48f4b2d1810238,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.847
+      value: 6.82
       objectReference: {fileID: 0}
     - target: {fileID: 662574234659321827, guid: ca70db693880bdd4fa48f4b2d1810238,
         type: 3}
@@ -8833,26 +8828,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'skeleton '
-      objectReference: {fileID: 0}
-    - target: {fileID: 662574234659321854, guid: ca70db693880bdd4fa48f4b2d1810238,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1537314851682025222, guid: ca70db693880bdd4fa48f4b2d1810238,
-        type: 3}
-      propertyPath: maxHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1537314851682025222, guid: ca70db693880bdd4fa48f4b2d1810238,
-        type: 3}
-      propertyPath: currentHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2944987904341985322, guid: ca70db693880bdd4fa48f4b2d1810238,
-        type: 3}
-      propertyPath: damage
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca70db693880bdd4fa48f4b2d1810238, type: 3}
