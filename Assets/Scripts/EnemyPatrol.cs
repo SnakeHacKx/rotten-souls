@@ -1,44 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyPatrol : MonoBehaviour
 {
+    private Rigidbody2D _rigidbody;
 
-    Rigidbody2D _rigidbody;
-     //Limites a los que llegara el enemigo dependiendo el radio del collider circulo que se usa como referencia.
-    float leftLimit;
-    float rightLimit;
+    //Limites a los que llegara el enemigo dependiendo el radio del collider circulo que se usa como referencia.
+    private float leftLimit;
+
+    private float rightLimit;
 
     [SerializeField]
-    float patrolSpeed = 1.25f;
+    private float patrolSpeed = 1.25f;
 
     //Valor que usaremos para ayudarnos a saber a que direccion debe ir el enemigo
-    int direction = 1;
-
+    private int direction = 1;
 
     //Definir enumeracion para los diferentes tipos de comportamientos de los enemigos
-    enum enemiesBehaviour { pasive, chasing, attacking}
+    private enum EnemiesBehaviour
+    { pasive, chasing, attacking }
 
-    enemiesBehaviour behaviour = enemiesBehaviour.pasive;
+    private EnemiesBehaviour behaviour = EnemiesBehaviour.pasive;
 
     //Definir la distancia a la que el zombie nos comienza a perseguir, a la que deja de perseguirnos y a la que nos ataca.
     [SerializeField]
-    float entryActiveZone = 2.5f;
-    [SerializeField]
-    float exitActiveZone = 3f;
-    [SerializeField]
-    float attackDistance = 0.35f;
+    private float entryActiveZone = 2.5f;
 
+    [SerializeField]
+    private float exitActiveZone = 3f;
+
+    [SerializeField]
+    private float attackDistance = 0.35f;
 
     //Definir distancia entre enemigo y el jugador
-    float distanceEnemyPlayer;
+    private float distanceEnemyPlayer;
 
     public Transform Player;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
 
@@ -53,14 +52,14 @@ public class EnemyPatrol : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         float playerPosition;
         playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position.x;
         distanceEnemyPlayer = Mathf.Abs(playerPosition - transform.position.x);
         switch (behaviour)
         {
-            case enemiesBehaviour.pasive:
+            case EnemiesBehaviour.pasive:
                 {
                     //la velocidad del enemigo en x sera igual a la velocidad de parulla (patrolSpeed) * la direccion a la cual tiene que ir. (la velocidad de y se mantiene igual)
                     _rigidbody.velocity = new Vector2(patrolSpeed * direction, _rigidbody.velocity.y);
@@ -82,10 +81,10 @@ public class EnemyPatrol : MonoBehaviour
                         gameObject.GetComponent<SpriteRenderer>().flipX = false;
                     }
 
-                    if (distanceEnemyPlayer < entryActiveZone) behaviour = enemiesBehaviour.chasing;
+                    if (distanceEnemyPlayer < entryActiveZone) behaviour = EnemiesBehaviour.chasing;
                     break;
                 }
-            case enemiesBehaviour.chasing:
+            case EnemiesBehaviour.chasing:
                 {
                     //la velocidad del enemigo en x sera igual a la velocidad de parulla (patrolSpeed) * la direccion a la cual tiene que ir. (la velocidad de y se mantiene igual)
                     _rigidbody.velocity = new Vector2(patrolSpeed * 1.5f * direction, _rigidbody.velocity.y);
@@ -106,11 +105,11 @@ public class EnemyPatrol : MonoBehaviour
                         //usar el componente sprite renderer para flipear el sprite
                         gameObject.GetComponent<SpriteRenderer>().flipX = false;
                     }
-                    if (distanceEnemyPlayer > exitActiveZone) behaviour = enemiesBehaviour.pasive;
-                    if (distanceEnemyPlayer < attackDistance) behaviour = enemiesBehaviour.attacking;
+                    if (distanceEnemyPlayer > exitActiveZone) behaviour = EnemiesBehaviour.pasive;
+                    if (distanceEnemyPlayer < attackDistance) behaviour = EnemiesBehaviour.attacking;
                     break;
                 }
-            case enemiesBehaviour.attacking:
+            case EnemiesBehaviour.attacking:
                 {
                     //si la posicion actual de x es menor que el limite izquierdo
                     if (playerPosition > transform.position.x)
@@ -128,7 +127,7 @@ public class EnemyPatrol : MonoBehaviour
                         //usar el componente sprite renderer para flipear el sprite
                         gameObject.GetComponent<SpriteRenderer>().flipX = false;
                     }
-                    if (distanceEnemyPlayer > attackDistance) behaviour = enemiesBehaviour.chasing;
+                    if (distanceEnemyPlayer > attackDistance) behaviour = EnemiesBehaviour.chasing;
                     break;
                 }
         }
