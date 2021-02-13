@@ -5,8 +5,7 @@ public class EnemyPatrol : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
 
-    Rigidbody2D _rigidbody;
-    Animator _animator;
+    private Animator _animator;
      //Limites a los que llegara el enemigo dependiendo el radio del collider circulo que se usa como referencia.
     float leftLimit;
     float rightLimit;
@@ -18,10 +17,10 @@ public class EnemyPatrol : MonoBehaviour
     private int direction = 1;
 
     //Definir enumeracion para los diferentes tipos de comportamientos de los enemigos
-    enum enemiesBehaviour {pasive, chasing, attacking}
+    enum EnemiesBehaviour {pasive, chasing, attacking}
 
     //Comportamiento por defecto sera pasivo
-    enemiesBehaviour behaviour = enemiesBehaviour.pasive;
+    EnemiesBehaviour behaviour = EnemiesBehaviour.pasive;
 
     //Definir la distancia a la que el zombie nos comienza a perseguir, a la que deja de perseguirnos y a la que nos ataca.
     [SerializeField]
@@ -106,7 +105,7 @@ public class EnemyPatrol : MonoBehaviour
                     }
 
                     //entrar a modo persecucion 
-                    if (distanceEnemyPlayer < entryActiveZone) behaviour = enemiesBehaviour.chasing;
+                    if (distanceEnemyPlayer < entryActiveZone) behaviour = EnemiesBehaviour.chasing;
                     break;
                 }
             case EnemiesBehaviour.chasing:
@@ -143,9 +142,9 @@ public class EnemyPatrol : MonoBehaviour
                     }
 
                     //entrar a modo pasivo
-                    if (distanceEnemyPlayer > exitActiveZone) behaviour = enemiesBehaviour.pasive;
+                    if (distanceEnemyPlayer > exitActiveZone) behaviour = EnemiesBehaviour.pasive;
                     //atacar
-                    if (distanceEnemyPlayer < attackDistance) behaviour = enemiesBehaviour.attacking;
+                    if (distanceEnemyPlayer < attackDistance) behaviour = EnemiesBehaviour.attacking;
                     break;
                 }
             case EnemiesBehaviour.attacking:
@@ -179,7 +178,7 @@ public class EnemyPatrol : MonoBehaviour
                     }
 
                     //volver a modo persecucion
-                    if (distanceEnemyPlayer > attackDistance) behaviour = enemiesBehaviour.chasing;
+                    if (distanceEnemyPlayer > attackDistance) behaviour = EnemiesBehaviour.chasing;
                     break;
                 }
         }
