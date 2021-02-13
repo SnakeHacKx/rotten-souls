@@ -5,10 +5,11 @@ public class EnemyPatrol : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
 
-    //Limites a los que llegara el enemigo dependiendo el radio del collider circulo que se usa como referencia.
-    private float leftLimit;
-
-    private float rightLimit;
+    Rigidbody2D _rigidbody;
+    Animator _animator;
+     //Limites a los que llegara el enemigo dependiendo el radio del collider circulo que se usa como referencia.
+    float leftLimit;
+    float rightLimit;
 
     [SerializeField]
     private float patrolSpeed = 1.25f;
@@ -17,10 +18,10 @@ public class EnemyPatrol : MonoBehaviour
     private int direction = 1;
 
     //Definir enumeracion para los diferentes tipos de comportamientos de los enemigos
-    private enum EnemiesBehaviour
-    { pasive, chasing, attacking }
+    enum enemiesBehaviour {pasive, chasing, attacking}
 
-    private EnemiesBehaviour behaviour = EnemiesBehaviour.pasive;
+    //Comportamiento por defecto sera pasivo
+    enemiesBehaviour behaviour = enemiesBehaviour.pasive;
 
     //Definir la distancia a la que el zombie nos comienza a perseguir, a la que deja de perseguirnos y a la que nos ataca.
     [SerializeField]
@@ -39,6 +40,7 @@ public class EnemyPatrol : MonoBehaviour
 
     private void Start()
     {
+        //buscar el componente rigidbody2d
         _rigidbody = GetComponent<Rigidbody2D>();
 
         //calculos
@@ -48,19 +50,33 @@ public class EnemyPatrol : MonoBehaviour
         //limite derecho = posicion actual de x + el radio hacia la derecha.
         rightLimit = transform.position.x + GetComponent<CircleCollider2D>().radius;
 
+        //encontrar la posicion del player
         Player = GameObject.Find("Player").transform;
+
+        //buscar el componente animator
+        _animator = transform.GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
     private void Update()
     {
         float playerPosition;
+
+        //posicion del jugador = a la posicion x del objeto con el tag player
         playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position.x;
+
+        //distancia entre el enemigo y el player = valor absoluto de la posicion del player - la posicion del enemigo
         distanceEnemyPlayer = Mathf.Abs(playerPosition - transform.position.x);
+
         switch (behaviour)
         {
             case EnemiesBehaviour.pasive:
                 {
+                    //hacer que la animacion del enemigo sea caminar
+                    _animator.SetBool("Walk", true);
+
+
                     //la velocidad del enemigo en x sera igual a la velocidad de parulla (patrolSpeed) * la direccion a la cual tiene que ir. (la velocidad de y se mantiene igual)
                     _rigidbody.velocity = new Vector2(patrolSpeed * direction, _rigidbody.velocity.y);
 
@@ -69,6 +85,10 @@ public class EnemyPatrol : MonoBehaviour
                     {
                         //direccion del personaje cambia a 1
                         direction = 1;
+
+                        //velocidad del animator
+                        _animator.speed = 1f;
+
                         //usar el componente sprite renderer para flipear el sprite
                         gameObject.GetComponent<SpriteRenderer>().flipX = true;
                     }
@@ -77,15 +97,23 @@ public class EnemyPatrol : MonoBehaviour
                     {
                         //direccion del personaje cambia a izquierda.
                         direction = -1;
+
+                        //velocidad del animator
+                        _animator.speed = 1f;
+
                         //usar el componente sprite renderer para flipear el sprite
                         gameObject.GetComponent<SpriteRenderer>().flipX = false;
                     }
 
-                    if (distanceEnemyPlayer < entryActiveZone) behaviour = EnemiesBehaviour.chasing;
+                    //entrar a modo persecucion 
+                    if (distanceEnemyPlayer < entryActiveZone) behaviour = enemiesBehaviour.chasing;
                     break;
                 }
             case EnemiesBehaviour.chasing:
                 {
+                    //hacer que la animacion del enemigo sea caminar
+                    _animator.SetBool("Walk", true);
+
                     //la velocidad del enemigo en x sera igual a la velocidad de parulla (patrolSpeed) * la direccion a la cual tiene que ir. (la velocidad de y se mantiene igual)
                     _rigidbody.velocity = new Vector2(patrolSpeed * 1.5f * direction, _rigidbody.velocity.y);
 
@@ -94,6 +122,10 @@ public class EnemyPatrol : MonoBehaviour
                     {
                         //direccion del personaje cambia a 1
                         direction = 1;
+
+                        //velocidad del animator
+                        _animator.speed = 2f;
+
                         //usar el componente sprite renderer para flipear el sprite
                         gameObject.GetComponent<SpriteRenderer>().flipX = true;
                     }
@@ -102,20 +134,34 @@ public class EnemyPatrol : MonoBehaviour
                     {
                         //direccion del personaje cambia a izquierda.
                         direction = -1;
+
+                        //velocidad del animator
+                        _animator.speed = 2f;
+
                         //usar el componente sprite renderer para flipear el sprite
                         gameObject.GetComponent<SpriteRenderer>().flipX = false;
                     }
-                    if (distanceEnemyPlayer > exitActiveZone) behaviour = EnemiesBehaviour.pasive;
-                    if (distanceEnemyPlayer < attackDistance) behaviour = EnemiesBehaviour.attacking;
+
+                    //entrar a modo pasivo
+                    if (distanceEnemyPlayer > exitActiveZone) behaviour = enemiesBehaviour.pasive;
+                    //atacar
+                    if (distanceEnemyPlayer < attackDistance) behaviour = enemiesBehaviour.attacking;
                     break;
                 }
             case EnemiesBehaviour.attacking:
                 {
+                    //hacer que el enemigo haga la animacion de ataque
+                    _animator.SetTrigger("Attack");
+
                     //si la posicion actual de x es menor que el limite izquierdo
                     if (playerPosition > transform.position.x)
                     {
                         //direccion del personaje cambia a 1
                         direction = 1;
+
+                        //velocidad del animator
+                        _animator.speed = 1f;
+
                         //usar el componente sprite renderer para flipear el sprite
                         gameObject.GetComponent<SpriteRenderer>().flipX = true;
                     }
@@ -124,10 +170,16 @@ public class EnemyPatrol : MonoBehaviour
                     {
                         //direccion del personaje cambia a izquierda.
                         direction = -1;
+
+                        //velocidad del animator
+                        _animator.speed = 1f;
+
                         //usar el componente sprite renderer para flipear el sprite
                         gameObject.GetComponent<SpriteRenderer>().flipX = false;
                     }
-                    if (distanceEnemyPlayer > attackDistance) behaviour = EnemiesBehaviour.chasing;
+
+                    //volver a modo persecucion
+                    if (distanceEnemyPlayer > attackDistance) behaviour = enemiesBehaviour.chasing;
                     break;
                 }
         }
