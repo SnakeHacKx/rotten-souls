@@ -46,7 +46,6 @@ public class GoToNewPlace : MonoBehaviour
                 FindObjectOfType<PlayerController>().nextUuid = uuid;
 
                 SceneManager.LoadScene(newPlaceName);
-                //_setCameraConfiner.SetCameraBoundary();
             }
         }     
     }

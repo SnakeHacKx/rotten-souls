@@ -12,7 +12,8 @@ public class HealthManager : MonoBehaviour
     [Tooltip("Vida actual")]
     private int currentHealth;
     
-
+    public int MaxHealth { get { return maxHealth; } }
+    public int CurrentHealth { get { return currentHealth; } }
 
     // Start is called before the first frame update
     void Start()

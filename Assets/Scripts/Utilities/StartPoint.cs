@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerController))]
 public class StartPoint : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource environmentSound;
+
     private PlayerController player;
 
     // unique unsigned identifier: básicamente es un identificador que hace único
@@ -32,5 +35,6 @@ public class StartPoint : MonoBehaviour
         // asigna la posición del gameObject punto de inicio (StartPoint) al del player
         player.transform.position = this.transform.position;
         _setCameraConfiner.SetCameraBoundary();
+        environmentSound.Play();
     }
 }

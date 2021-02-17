@@ -6,9 +6,11 @@ public class EnemyPatrol : MonoBehaviour
     private Rigidbody2D _rigidbody;
 
     private Animator _animator;
-     //Limites a los que llegara el enemigo dependiendo el radio del collider circulo que se usa como referencia.
-    float leftLimit;
-    float rightLimit;
+
+    //Limites a los que llegara el enemigo dependiendo el radio del collider circulo que se usa como referencia.
+    private float leftLimit;
+
+    private float rightLimit;
 
     [SerializeField]
     private float patrolSpeed = 1.25f;
@@ -17,10 +19,11 @@ public class EnemyPatrol : MonoBehaviour
     private int direction = 1;
 
     //Definir enumeracion para los diferentes tipos de comportamientos de los enemigos
-    enum EnemiesBehaviour {pasive, chasing, attacking}
+    private enum EnemiesBehaviour
+    { pasive, chasing, attacking }
 
     //Comportamiento por defecto sera pasivo
-    EnemiesBehaviour behaviour = EnemiesBehaviour.pasive;
+    private EnemiesBehaviour behaviour = EnemiesBehaviour.pasive;
 
     //Definir la distancia a la que el zombie nos comienza a perseguir, a la que deja de perseguirnos y a la que nos ataca.
     [SerializeField]
@@ -35,7 +38,7 @@ public class EnemyPatrol : MonoBehaviour
     //Definir distancia entre enemigo y el jugador
     private float distanceEnemyPlayer;
 
-    public Transform Player;
+    public Transform player;
 
     private void Start()
     {
@@ -45,16 +48,15 @@ public class EnemyPatrol : MonoBehaviour
         //calculos
 
         //limite izquierdo =  posicion actual de x - el radio hacia la izquierda.
-        leftLimit = transform.position.x - GetComponent<CircleCollider2D>().radius;
+        leftLimit = transform.position.x - GetComponentInChildren<CircleCollider2D>().radius;
         //limite derecho = posicion actual de x + el radio hacia la derecha.
-        rightLimit = transform.position.x + GetComponent<CircleCollider2D>().radius;
+        rightLimit = transform.position.x + GetComponentInChildren<CircleCollider2D>().radius;
 
         //encontrar la posicion del player
-        Player = GameObject.Find("Player").transform;
+        player = GameObject.Find("Player").transform;
 
         //buscar el componente animator
         _animator = transform.GetComponent<Animator>();
-
     }
 
     // Update is called once per frame
@@ -74,7 +76,6 @@ public class EnemyPatrol : MonoBehaviour
                 {
                     //hacer que la animacion del enemigo sea caminar
                     _animator.SetBool("Walk", true);
-
 
                     //la velocidad del enemigo en x sera igual a la velocidad de parulla (patrolSpeed) * la direccion a la cual tiene que ir. (la velocidad de y se mantiene igual)
                     _rigidbody.velocity = new Vector2(patrolSpeed * direction, _rigidbody.velocity.y);
@@ -104,8 +105,9 @@ public class EnemyPatrol : MonoBehaviour
                         gameObject.GetComponent<SpriteRenderer>().flipX = false;
                     }
 
-                    //entrar a modo persecucion 
+                    //entrar a modo persecucion
                     if (distanceEnemyPlayer < entryActiveZone) behaviour = EnemiesBehaviour.chasing;
+
                     break;
                 }
             case EnemiesBehaviour.chasing:
@@ -143,8 +145,10 @@ public class EnemyPatrol : MonoBehaviour
 
                     //entrar a modo pasivo
                     if (distanceEnemyPlayer > exitActiveZone) behaviour = EnemiesBehaviour.pasive;
+
                     //atacar
                     if (distanceEnemyPlayer < attackDistance) behaviour = EnemiesBehaviour.attacking;
+
                     break;
                 }
             case EnemiesBehaviour.attacking:
@@ -179,6 +183,7 @@ public class EnemyPatrol : MonoBehaviour
 
                     //volver a modo persecucion
                     if (distanceEnemyPlayer > attackDistance) behaviour = EnemiesBehaviour.chasing;
+
                     break;
                 }
         }

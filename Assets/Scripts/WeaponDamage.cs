@@ -20,6 +20,7 @@ public class WeaponDamage : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("Golpeó a un enemigo");
             var clone = (GameObject)Instantiate(canvasDamage,
                 hitPoint.transform.position,
                 Quaternion.Euler(Vector3.zero));

@@ -3,7 +3,7 @@
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(LayerMask))]
-[RequireComponent(typeof(Transform))]
+
 public class PlayerController : MonoBehaviour
 {
     // Permite saber a todo el programa que el jugador ya ha sido creado, esto
@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public static bool playerCreated;
 
     public bool isTalking;
+    public bool isWalking = false;
 
     [SerializeField]
     [Tooltip("Tiempo que tardará en hacer la animación del Long Iddle")]
@@ -23,6 +24,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     [Tooltip("Fuerza de impulso al saltar")]
     private float jumpForce = 2.5f;
+
+    //[SerializeField]
+    private AudioSource _audioSource;
 
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -61,6 +65,7 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -76,10 +81,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        // Is Grounded?
+        // Está en el suelo?
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // Is Jumping?
+        // Está saltando?
         if (Input.GetButtonDown("Jump") && _isGrounded == true && _isAttacking == false)
         {
             isJumping = true;
@@ -105,12 +110,22 @@ public class PlayerController : MonoBehaviour
             isJumping = false;
         }
 
-        // Wanna Attack?
+        // Quieres atacar?
         if (Input.GetKeyDown(KeyCode.Mouse0) && _isAttacking == false /*&& attacksOnAir <= maxAttacksOnAir*/)
         {
             _movement = Vector2.zero;
             _rigidbody.velocity = Vector2.zero;
             _animator.SetTrigger("Attacking");
+        }
+
+        if (_isGrounded && _movement != Vector2.zero)
+        {
+            if (!_audioSource.isPlaying)
+                _audioSource.Play();
+        }
+        else
+        {
+            _audioSource.Stop();
         }
     }
 
@@ -130,11 +145,11 @@ public class PlayerController : MonoBehaviour
 
         if (_isAttacking == false)
         {
-            // Movement
+            // Movimiento
             float horizontalInput = Input.GetAxisRaw(AXIS_H);
             _movement = new Vector2(horizontalInput, 0f);
 
-            // Flip character
+            // Girar personaje
             if (horizontalInput < 0f && _facingRight == true)
             {
                 Flip();
@@ -144,6 +159,7 @@ public class PlayerController : MonoBehaviour
                 Flip();
             }
         }
+           
     }
 
     private void LateUpdate()
