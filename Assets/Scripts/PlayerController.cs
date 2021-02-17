@@ -2,9 +2,16 @@
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
-
+[RequireComponent(typeof(LayerMask))]
+[RequireComponent(typeof(Transform))]
 public class PlayerController : MonoBehaviour
 {
+    // Permite saber a todo el programa que el jugador ya ha sido creado, esto
+    // para que al cargar más de una escena, no se creen clones de este
+    public static bool playerCreated;
+
+    public bool isTalking;
+
     [SerializeField]
     [Tooltip("Tiempo que tardará en hacer la animación del Long Iddle")]
     private float longIdleTime = 5f;
@@ -43,10 +50,12 @@ public class PlayerController : MonoBehaviour
 
     // Attack
     private bool _isAttacking;
-    //[SerializeField]
-    //[Tooltip("Número de ataques máximo que puede hacer el player en el aire")]
-    //private int maxAttacksOnAir = 1;
-    //private int attacksOnAir;
+
+    public Vector2 lastMovement = Vector2.zero;
+    private const string AXIS_H = "Horizontal", AXIS_V = "VerticalVelocity";
+
+    // guarda la referencia del siguiente lugar al que se quiere ir
+    public string nextUuid;
 
     private void Awake()
     {
@@ -56,24 +65,17 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        // attacksOnAir = 0;
+        // Si no se ha creado el jugador, "se crea"
+        if (!playerCreated)
+        {
+            playerCreated = true;
+        }
+
+        isTalking = false;
     }
 
     private void Update()
     {
-        /*if (_isAttacking == false) {
-			// Movement
-			float horizontalInput = Input.GetAxisRaw("Horizontal");
-			_movement = new Vector2(horizontalInput, 0f);
-
-			// Flip character
-			if (horizontalInput < 0f && _facingRight == true) {
-				Flip();
-			} else if (horizontalInput > 0f && _facingRight == false) {
-				Flip();
-			}
-		}*/
-
         // Is Grounded?
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
@@ -83,7 +85,6 @@ public class PlayerController : MonoBehaviour
             isJumping = true;
             jumpTimeCounter = jumpTime;
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            //attacksOnAir = 0;
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -109,12 +110,18 @@ public class PlayerController : MonoBehaviour
         {
             _movement = Vector2.zero;
             _rigidbody.velocity = Vector2.zero;
-            _animator.SetTrigger("Attack");
+            _animator.SetTrigger("Attacking");
         }
     }
 
     private void FixedUpdate()
     {
+        if (isTalking)
+        {
+            _rigidbody.velocity = Vector2.zero;
+            return;
+        }
+
         if (_isAttacking == false)
         {
             float horizontalVelocity = _movement.normalized.x * speed;
@@ -124,7 +131,7 @@ public class PlayerController : MonoBehaviour
         if (_isAttacking == false)
         {
             // Movement
-            float horizontalInput = Input.GetAxisRaw("Horizontal");
+            float horizontalInput = Input.GetAxisRaw(AXIS_H);
             _movement = new Vector2(horizontalInput, 0f);
 
             // Flip character
@@ -143,10 +150,11 @@ public class PlayerController : MonoBehaviour
     {
         _animator.SetBool("Idle", _movement == Vector2.zero);
         _animator.SetBool("IsGrounded", _isGrounded);
-        _animator.SetFloat("VerticalVelocity", _rigidbody.velocity.y);
+        _animator.SetFloat(AXIS_V, _rigidbody.velocity.y);
+        _animator.SetFloat(AXIS_H, Input.GetAxisRaw(AXIS_H));
 
         // Animator
-        if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attacking"))
         {
             _isAttacking = true;
         }
