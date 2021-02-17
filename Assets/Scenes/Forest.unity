@@ -1330,6 +1330,11 @@ PrefabInstance:
       propertyPath: uuid
       value: cave entrance
       objectReference: {fileID: 0}
+    - target: {fileID: 2605448968807271252, guid: 37aee273d683524409b55bea3c122bbf,
+        type: 3}
+      propertyPath: environmentSound
+      value: 
+      objectReference: {fileID: 102578365}
     - target: {fileID: 2605448968807271253, guid: 37aee273d683524409b55bea3c122bbf,
         type: 3}
       propertyPath: m_Icon
