@@ -1,22 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    [SerializeField]
     [Tooltip("Vida máxima")]
-    private int maxHealth;
-
-    [SerializeField]
-    [Tooltip("Vida actual")]
-    private int currentHealth;
+    [SerializeField] private int maxHealth;
     
-    public int MaxHealth { get { return maxHealth; } }
-    public int CurrentHealth { get { return currentHealth; } }
+    [Tooltip("Vida actual")]
+    [SerializeField] private int currentHealth;
 
-    // Start is called before the first frame update
-    void Start()
+    public int MaxHealth { get { return maxHealth; } }
+
+    public int CurrentHealth
+    {
+        get { return currentHealth; }
+
+        set
+        {
+            if (value < 0) currentHealth = 0;
+
+            else currentHealth = value;
+        }
+    }
+
+    private void Start()
     {
         // Al iniciar el juego la vida la ponemos al máximo
         UpdateMaxHealth(maxHealth);
@@ -24,8 +30,11 @@ public class HealthManager : MonoBehaviour
 
     public void DamageCharacter(int damage)
     {
-        currentHealth -= damage;
-        if(currentHealth <= 0)
+        SFXManager.SharedInstance.PlaySFX(SFXType.SoundType.HIT);
+
+        CurrentHealth -= damage;
+
+        if (CurrentHealth <= 0)
         {
             gameObject.SetActive(false);
         }
@@ -36,6 +45,6 @@ public class HealthManager : MonoBehaviour
     public void UpdateMaxHealth(int newMaxHealth)
     {
         maxHealth = newMaxHealth;
-        currentHealth = maxHealth;
+        CurrentHealth = maxHealth;
     }
 }

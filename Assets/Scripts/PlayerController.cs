@@ -13,21 +13,22 @@ public class PlayerController : MonoBehaviour
     public bool isTalking;
     public bool isWalking = false;
 
-    [SerializeField]
     [Tooltip("Tiempo que tardará en hacer la animación del Long Iddle")]
-    private float longIdleTime = 5f;
-
-    [SerializeField]
-    [Tooltip("Velocidad de movimiento en el eje X")]
-    private float speed = 2.5f;
+    [SerializeField] private float longIdleTime = 5f;
     
-    [SerializeField]
+    [Header("Rigid Variables")]
+    [Tooltip("Velocidad de movimiento en el eje X")]
+    [SerializeField] private float speed = 2.5f;
+    
     [Tooltip("Fuerza de impulso al saltar")]
-    private float jumpForce = 2.5f;
+    [SerializeField] private float jumpForce = 2.5f;
 
-    //[SerializeField]
-    private AudioSource _audioSource;
+    //[Header("Audio Variables")]
+    //[SerializeField] private AudioSource _walkingStepSound;
+    //[SerializeField] private AudioSource _attackingSound;
 
+    //[SerializeField] private AudioManager audioManager;
+ 
     public Transform groundCheck;
     public LayerMask groundLayer;
     public float groundCheckRadius;
@@ -65,7 +66,6 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -84,49 +84,9 @@ public class PlayerController : MonoBehaviour
         // Está en el suelo?
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // Está saltando?
-        if (Input.GetButtonDown("Jump") && _isGrounded == true && _isAttacking == false)
-        {
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
-            _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        }
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-            if(jumpTimeCounter > 0 && isJumping == true)
-            {
-                _rigidbody.velocity = Vector2.up * jumpForce;
-                jumpTimeCounter -= Time.deltaTime;
-            }
-            else
-            {
-                isJumping = false;
-            }
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            isJumping = false;
-        }
-
-        // Quieres atacar?
-        if (Input.GetKeyDown(KeyCode.Mouse0) && _isAttacking == false /*&& attacksOnAir <= maxAttacksOnAir*/)
-        {
-            _movement = Vector2.zero;
-            _rigidbody.velocity = Vector2.zero;
-            _animator.SetTrigger("Attacking");
-        }
-
-        if (_isGrounded && _movement != Vector2.zero)
-        {
-            if (!_audioSource.isPlaying)
-                _audioSource.Play();
-        }
-        else
-        {
-            _audioSource.Stop();
-        }
+        HandleJump();
+        HandleAttack();
+        //HandleMovement();
     }
 
     private void FixedUpdate()
@@ -192,6 +152,78 @@ public class PlayerController : MonoBehaviour
         else
         {
             _longIdleTimer = 0f;
+        }
+
+        if (_isGrounded && _movement == Vector2.zero)
+        {
+            StopStepSound();
+        }
+    }
+
+    public void PlayStepSound()
+    {
+        //_walkingStepSound.Play();
+    }
+
+    private void StopStepSound()
+    {
+        //_walkingStepSound.Stop();
+    }
+
+    private void HandleMovement()
+    {
+        // Está caminando?
+        /*if (_isGrounded && _movement != Vector2.zero)
+        {
+            //if (!_walkingStepSound.isPlaying)
+            //    _walkingStepSound.Play();
+            PlayStepSound();
+
+        }*/
+        //else
+        //{
+        //    //_walkingStepSound.Stop();
+        //}
+    }
+
+    private void HandleAttack()
+    {
+        // Quieres atacar?
+        if (Input.GetKeyDown(KeyCode.Mouse0) && _isAttacking == false)
+        {
+            _movement = Vector2.zero;
+            _rigidbody.velocity = Vector2.zero;
+            _animator.SetTrigger("Attacking");
+            SFXManager.SharedInstance.PlaySFX(SFXType.SoundType.ATTACK);
+        }
+    }
+
+    private void HandleJump()
+    {
+        // Está saltando?
+        if (Input.GetButtonDown("Jump") && _isGrounded == true && _isAttacking == false)
+        {
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (jumpTimeCounter > 0 && isJumping == true)
+            {
+                _rigidbody.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            isJumping = false;
         }
     }
 
