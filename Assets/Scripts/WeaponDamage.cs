@@ -1,15 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WeaponDamage : MonoBehaviour
 {
     public GameObject canvasDamage;
     public GameObject hitPoint;
-
-    [SerializeField]
+    
     [Tooltip("Daño que proporciona a los enemigos")]
-    private int damage;
+    [SerializeField] private int damage;
 
     private void Start()
     {

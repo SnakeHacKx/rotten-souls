@@ -5,10 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerController))]
 public class StartPoint : MonoBehaviour
 {
-    [SerializeField]
-    private AudioSource environmentSound;
-
     private PlayerController player;
+    //private AudioManager audioManager;
 
     // unique unsigned identifier: básicamente es un identificador que hace único
     // cada start point, esto para saber en cual quiero aparecer
@@ -23,7 +21,7 @@ public class StartPoint : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        _setCameraConfiner = GetComponent<SetCameraConfiner>();
+        _setCameraConfiner = GetComponent<SetCameraConfiner>();   
 
         // Si el uuid siguiente no coincide con el uuid actual
         // NO es el lugar al que queríamos teletransportarnos
@@ -35,6 +33,6 @@ public class StartPoint : MonoBehaviour
         // asigna la posición del gameObject punto de inicio (StartPoint) al del player
         player.transform.position = this.transform.position;
         _setCameraConfiner.SetCameraBoundary();
-        environmentSound.Play();
+        //audioManager.GetComponent<AudioManager>().PlayEnvironmentSound();
     }
 }
