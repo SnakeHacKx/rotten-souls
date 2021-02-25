@@ -13,15 +13,15 @@ public class GoToNewPlace : MonoBehaviour
     [Tooltip("¿Necesita el jugador pulsar la tecla E para irse a un nuevo lugar?")]
     private bool needsClick;
 
-    private SetCameraConfiner _setCameraConfiner;
+    //private SetCameraConfiner _setCameraConfiner;
 
     // identificador del start point al cual se quiere ir
     public string uuid;
 
-    private void Start()
-    {
-        _setCameraConfiner = GetComponent<SetCameraConfiner>();
-    }
+    //private void Start()
+    //{
+    //    _setCameraConfiner = GetComponent<SetCameraConfiner>();
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {        
