@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Forest.unity
+    path: Assets/Scenes/Other Zones/Forest.unity
     guid: 6b49b647ff19c2b4fa1ca5b5b2c2492f
   - enabled: 1
-    path: Assets/Scenes/Caves.unity
+    path: Assets/Scenes/Other Zones/Caves.unity
     guid: 7eedb155c78e13148b348668aa0fd5fe
+  - enabled: 1
+    path: Assets/Scenes/Infernos/Hell1_1.unity
+    guid: e431a5750b10c2649a0d2ba70fe75b25
   m_configObjects: {}

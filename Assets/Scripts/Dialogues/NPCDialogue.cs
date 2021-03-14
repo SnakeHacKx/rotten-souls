@@ -40,7 +40,7 @@ public class NPCDialogue : MonoBehaviour
 
     void Update()
     {
-        if(playerInTheZone && Input.GetKeyDown(KeyCode.Q))
+        if(playerInTheZone && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button3)))
         {
             string[] finalDialogue = new string[npcDialogueLines.Length];
 

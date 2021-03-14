@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dialogueActive && Input.GetKeyDown(KeyCode.X))
+        if (dialogueActive && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Joystick1Button0)))
         {
             currentDialogueLine++;
 

@@ -57,6 +57,8 @@ public class PlayerController : MonoBehaviour
     private bool _isAttacking;
 
     public Vector2 lastMovement = Vector2.zero;
+    private const string JUMP = "Jump";
+    private const string ATTACK = "Attack";
     private const string AXIS_H = "Horizontal", AXIS_V = "VerticalVelocity";
 
     // guarda la referencia del siguiente lugar al que se quiere ir
@@ -189,26 +191,26 @@ public class PlayerController : MonoBehaviour
     private void HandleAttack()
     {
         // Quieres atacar?
-        if (Input.GetKeyDown(KeyCode.Mouse0) && _isAttacking == false)
+        if (Input.GetButtonDown(ATTACK) && _isAttacking == false)
         {
             _movement = Vector2.zero;
             _rigidbody.velocity = Vector2.zero;
             _animator.SetTrigger("Attacking");
-            SFXManager.SharedInstance.PlaySFX(SFXType.SoundType.ATTACK);
+            //SFXManager.SharedInstance.PlaySFX(SFXType.SoundType.ATTACK);
         }
     }
 
     private void HandleJump()
     {
         // Está saltando?
-        if (Input.GetButtonDown("Jump") && _isGrounded == true && _isAttacking == false)
+        if (Input.GetButtonDown(JUMP) && _isGrounded == true && _isAttacking == false)
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Joystick2Button0))
         {
             if (jumpTimeCounter > 0 && isJumping == true)
             {

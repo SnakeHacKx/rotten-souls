@@ -5,6 +5,7 @@ using Cinemachine;
 
 public class SetCameraConfiner : MonoBehaviour
 {
+    [SerializeField] TagID confinerTag;
     public void SetCameraBoundary()
     {
         var virtualCamera = GameObject.FindGameObjectWithTag("VirtualCamera");
@@ -14,6 +15,6 @@ public class SetCameraConfiner : MonoBehaviour
         confiner.m_BoundingShape2D = null;
         confiner.InvalidatePathCache();
         
-        confiner.m_BoundingShape2D = GameObject.FindGameObjectWithTag("MyNewConfiner").GetComponent<Collider2D>();
+        confiner.m_BoundingShape2D = GameObject.FindGameObjectWithTag(confinerTag.ToString()).GetComponent<Collider2D>();
     }
 }

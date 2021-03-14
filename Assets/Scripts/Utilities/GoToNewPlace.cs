@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Collider2D))]
 public class GoToNewPlace : MonoBehaviour
 {
-    [SerializeField]
-    private string newPlaceName = "New Scene Name Here!!!";
+    [SerializeField] private SceneID levelToLoad;
 
     [SerializeField]
     [Tooltip("¿Necesita el jugador pulsar la tecla E para irse a un nuevo lugar?")]
@@ -16,7 +15,9 @@ public class GoToNewPlace : MonoBehaviour
     //private SetCameraConfiner _setCameraConfiner;
 
     // identificador del start point al cual se quiere ir
-    public string uuid;
+    // public string uuid;
+
+    [SerializeField] private StartAndTeleportPointsID uuid;
 
     //private void Start()
     //{
@@ -43,9 +44,9 @@ public class GoToNewPlace : MonoBehaviour
             {
                 // indica que el siguiente punto de teletransporte es el que se le ha
                 // puesto al GoToNewPlace
-                FindObjectOfType<PlayerController>().nextUuid = uuid;
+                FindObjectOfType<PlayerController>().nextUuid = uuid.ToString();
 
-                SceneManager.LoadScene(newPlaceName);
+                SceneManager.LoadScene(levelToLoad.ToString());
             }
         }     
     }

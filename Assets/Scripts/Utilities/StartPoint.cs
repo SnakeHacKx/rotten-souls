@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerController))]
 public class StartPoint : MonoBehaviour
 {
     private PlayerController player;
@@ -10,7 +10,9 @@ public class StartPoint : MonoBehaviour
 
     // unique unsigned identifier: básicamente es un identificador que hace único
     // cada start point, esto para saber en cual quiero aparecer
-    public string uuid;
+    // public string uuid;
+
+    [SerializeField] private StartAndTeleportPointsID uuid;
 
     private SetCameraConfiner _setCameraConfiner;
 
@@ -25,7 +27,7 @@ public class StartPoint : MonoBehaviour
 
         // Si el uuid siguiente no coincide con el uuid actual
         // NO es el lugar al que queríamos teletransportarnos
-        if (!player.nextUuid.Equals(uuid))
+        if (!player.nextUuid.Equals(uuid.ToString()))
         {
             return;
         }
