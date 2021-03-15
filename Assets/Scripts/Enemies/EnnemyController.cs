@@ -2,23 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// <para>[ESTA CLASE NO ESTÁ EN USO ACTUALMENTE]</para> 
+/// Controla a los enemigos.
+/// <list type="bullet">
+/// <item>
+/// <term>Start</term>
+/// <description>Controla el daño hacia el personaje</description>
+/// </item>
+/// <item>
+/// <term>Update</term>
+/// <description>Actualiza la vida máxima</description>
+/// </item>
+/// </list>
+/// </summary>
+/// <remarks>
+/// Controla su velocidad de movimiento, el tiempo entre los pasos y la dirección del movimiento.
+/// </remarks>
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnnemyController : MonoBehaviour
 {
-    [SerializeField]
     [Tooltip("Velocidad de movimiento del enemigo")]
-    private float speed = 1;
+    [SerializeField] private float speed = 1;
 
     private Rigidbody2D _rigidbody;
 
+    // Variable booleana que indica si el enemigo está o no en movimiento
     private bool isMoving;
 
-    [Tooltip("Tiempo que tarda el enemigo entre un paso y el siguiente (pasos sucesivas)")]
+    [Tooltip("Tiempo que tarda el enemigo entre un paso y el siguiente (pasos sucesivos)")]
     public float timeBetweenSteps;
     private float timeBetweenStepsCounter;
 
     [Tooltip("Tiempo que tarda el enemigo en dar un paso")]
     public float timeToMakeStep;
+
     private float timeToMakeStepCounter;
 
     public Vector2 directionToMove;

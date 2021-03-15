@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Contiene los diferentes puntos de inicio y teletransporte de una escena a otra,
+/// esto para mejor comodidad al ponerlos en el inspector de Unity
+/// </summary>
 public enum StartAndTeleportPointsID
 {
     nothing = 0,

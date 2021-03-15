@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// ...
+/// </summary>
 public class PlayNewTrack : MonoBehaviour
 {
     private AudioManager audioManager;
@@ -21,7 +24,7 @@ public class PlayNewTrack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag(TagID.Player.ToString()))
         {
             audioManager.PlayNewTrack(newTrackID);
             gameObject.SetActive(false);

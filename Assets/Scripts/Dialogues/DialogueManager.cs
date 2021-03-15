@@ -1,29 +1,41 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
+/// <summary>
+/// <para>Mánager de los Diálogos.</para>
+/// Contiene todos los métodos referentes a los diálogos del juego.
+/// <list type="bullet">
+/// <item>
+/// <term>ShowDialogue</term>
+/// <description>Muestra las líneas de diálogo en pantalla.</description>
+/// </item>
+/// <item>
+/// <term>Update</term>
+/// <description>Actúa como receptor en la pantalla de diálogos.</description>
+/// </item>
+/// </list>
+/// </summary>
 [RequireComponent(typeof(GameObject))]
 [RequireComponent(typeof(TMP_Text))]
 [RequireComponent(typeof(PlayerController))]
 public class DialogueManager : MonoBehaviour
 {
+    [Tooltip("Inserte la caja de la UI que contendrá los diálogos")]
     public GameObject dialogueBox;
+
+    [Tooltip("...")]
     public TMP_Text dialogueText;
 
-    [SerializeField]
     [Tooltip("El diálogo está activo?")]
-    private bool dialogueActive;
+    [SerializeField] private bool dialogueActive;
 
-    [SerializeField]
     [Tooltip("Las diferentes líneas de diálogo que puede tener NPC, objeto, etc...")]
-    private string[] dialogueLines;
+    [SerializeField] private string[] dialogueLines;
 
-    [SerializeField]
     [Tooltip("Muestra la línea de diálogo actual")]
-    private int currentDialogueLine;
+    [SerializeField] private int currentDialogueLine;
 
+    // Referencia a la clase PlayerController
     private PlayerController playerController;
 
     private void Start()
@@ -34,8 +46,15 @@ public class DialogueManager : MonoBehaviour
         playerController = FindObjectOfType<PlayerController>();
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Actúa como receptor en la pantalla de diálogos.
+    /// </summary>
+    /// <remarks>
+    /// Si presionamos la letra X del teclado o el botón A de un mando de XBOX,
+    /// se pasará a la siguiente línea de diálogo, si ya no quedan más, desactiva la caja
+    /// y los diálogos.
+    /// </remarks>
+    private void Update()
     {
         if (dialogueActive && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Joystick1Button0)))
         {
@@ -55,6 +74,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Muestra las líneas de diálogo en pantalla.
+    /// </summary>
+    /// <remarks>
+    /// Inicia desde la primera línea, activa los diálogos y su caja.
+    /// </remarks>
+    /// <param name="lines">Líneas de diálogo recibidas desde el inspector de Unity.</param>
     public void ShowDialogue(string[] lines)
     {
         currentDialogueLine = 0;

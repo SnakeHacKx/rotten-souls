@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Contiene los nombres de las escenas, para usarlos con comodidad
+/// en el inspector de Unity
+/// </summary>
 public enum SceneID
 {
     Caves = 0x000100,

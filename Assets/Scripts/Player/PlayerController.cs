@@ -1,9 +1,41 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Controla al jugador y todas sus variables.
+/// <list type="bullet">
+/// <item>
+/// <term>Start</term>
+/// <description>Crea al jugador.</description>
+/// </item>
+/// <item>
+/// <term>Update</term>
+/// <description>Detecta cada frame si el jugador está en el suelo, saltando o moviéndose.</description>
+/// </item>
+/// <item>
+/// <term>FixedUpdate</term>
+/// <description>Mueve y manda a girar al jugador.</description>
+/// </item>
+/// <item>
+/// <term>LateUpdate</term>
+/// <description>Controla las animaciones del jugador.</description>
+/// </item>
+/// <item>
+/// <term>HandleAttack</term>
+/// <description>Referente al ataque del jugador.</description>
+/// </item>
+/// <item>
+/// <term>HandleJump</term>
+/// <description>Se encarga del salto del jugador.</description>
+/// </item>
+/// <item>
+/// <term>Flip</term>
+/// <description>Encargado de girar al jugador.</description>
+/// </item>
+/// </list>
+/// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(LayerMask))]
-
 public class PlayerController : MonoBehaviour
 {
     // Permite saber a todo el programa que el jugador ya ha sido creado, esto
@@ -29,8 +61,11 @@ public class PlayerController : MonoBehaviour
 
     //[SerializeField] private AudioManager audioManager;
  
+    [Tooltip("Transform del gameobject que se encarga de detectar si el jugador está o no en el suelo")]
     public Transform groundCheck;
+    [Tooltip("Capa que se usará para detectar si el jugador está o no en el suelo")]
     public LayerMask groundLayer;
+    [Tooltip("Radio de detección del suelo")]
     public float groundCheckRadius;
 
     // References
@@ -48,20 +83,21 @@ public class PlayerController : MonoBehaviour
     private bool _isGrounded;
     private float jumpTimeCounter;
 
-    [SerializeField]
     [Tooltip("Tiempo máximo en el que será válido que el usuario presione el botón de saltar")]
-    private float jumpTime;
+    [SerializeField] private float jumpTime;
     private bool isJumping;
 
     // Attack
     private bool _isAttacking;
 
+    [Tooltip("Guardará la dirección del último movimiento del jugador")]
     public Vector2 lastMovement = Vector2.zero;
+
     private const string JUMP = "Jump";
     private const string ATTACK = "Attack";
     private const string AXIS_H = "Horizontal", AXIS_V = "VerticalVelocity";
 
-    // guarda la referencia del siguiente lugar al que se quiere ir
+    // Guarda la referencia del siguiente escena a la que se quiere ir
     public string nextUuid;
 
     private void Awake()
@@ -70,6 +106,9 @@ public class PlayerController : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
+    /// <summary>
+    /// Creal al jugador si este no ha sido creado con anterioridad
+    /// </summary>
     private void Start()
     {
         // Si no se ha creado el jugador, "se crea"
@@ -81,6 +120,10 @@ public class PlayerController : MonoBehaviour
         isTalking = false;
     }
 
+    /// <summary>
+    /// Detecta cada frame si el jugador está en el suelo y llama a los métodos <c>HandleJump()</c>
+    /// y <c>HandleAttack()</c>
+    /// </summary>
     private void Update()
     {
         // Está en el suelo?
@@ -91,6 +134,9 @@ public class PlayerController : MonoBehaviour
         //HandleMovement();
     }
 
+    /// <summary>
+    /// Se encarga del movimiento del jugador y de girarlo si es necesario
+    /// </summary>
     private void FixedUpdate()
     {
         if (isTalking)
@@ -124,6 +170,9 @@ public class PlayerController : MonoBehaviour
            
     }
 
+    /// <summary>
+    /// Aquí están todas las animaciones del jugador
+    /// </summary>
     private void LateUpdate()
     {
         _animator.SetBool("Idle", _movement == Vector2.zero);
@@ -156,38 +205,15 @@ public class PlayerController : MonoBehaviour
             _longIdleTimer = 0f;
         }
 
-        if (_isGrounded && _movement == Vector2.zero)
-        {
-            StopStepSound();
-        }
-    }
-
-    public void PlayStepSound()
-    {
-        //_walkingStepSound.Play();
-    }
-
-    private void StopStepSound()
-    {
-        //_walkingStepSound.Stop();
-    }
-
-    private void HandleMovement()
-    {
-        // Está caminando?
-        /*if (_isGrounded && _movement != Vector2.zero)
-        {
-            //if (!_walkingStepSound.isPlaying)
-            //    _walkingStepSound.Play();
-            PlayStepSound();
-
-        }*/
-        //else
+        //if (_isGrounded && _movement == Vector2.zero)
         //{
-        //    //_walkingStepSound.Stop();
+        //    StopStepSound();
         //}
     }
 
+    /// <summary>
+    /// Maneja el ataque del jugador, cuando hacerlo y activar su animación
+    /// </summary>
     private void HandleAttack()
     {
         // Quieres atacar?
@@ -200,6 +226,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Maneja el salto y doble salto del jugador
+    /// </summary>
     private void HandleJump()
     {
         // Está saltando?
@@ -229,11 +258,35 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Hace que el jugador gire en su escala x
+    /// </summary>
+    /// <remarks>
+    /// Sería lo mismo que rotarlo 180° o 0° en el eje Y usando cuaterniones
+    /// </remarks>
     private void Flip()
     {
         _facingRight = !_facingRight;
         float localScaleX = transform.localScale.x;
-        localScaleX = localScaleX * -1f;
+        localScaleX *= -1f;
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
+
+    //private void HandleMovement()
+    //{
+    //    // Está caminando?
+    //    /*if (_isGrounded && _movement != Vector2.zero)
+    //    {
+    //        //if (!_walkingStepSound.isPlaying)
+    //        //    _walkingStepSound.Play();
+    //        PlayStepSound();
+
+    //    }*/
+    //    //else
+    //    //{
+    //    //    //_walkingStepSound.Stop();
+    //    //}
+    //}
+
+
 }

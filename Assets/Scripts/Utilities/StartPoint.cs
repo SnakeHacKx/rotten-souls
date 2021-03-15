@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// Controla lo referente al punto de aparición del jugador al cargar una nueva escena.
+/// </summary>
 public class StartPoint : MonoBehaviour
 {
     private PlayerController player;
@@ -12,6 +15,7 @@ public class StartPoint : MonoBehaviour
     // cada start point, esto para saber en cual quiero aparecer
     // public string uuid;
 
+    [Tooltip("Punto de inicio de la escena")]
     [SerializeField] private StartAndTeleportPointsID uuid;
 
     private SetCameraConfiner _setCameraConfiner;
@@ -19,7 +23,6 @@ public class StartPoint : MonoBehaviour
     // variable que controla a donde mirará el jugador al entrar en una nueva escena
     //public Vector2 facingDirection = Vector2.zero;
 
-    // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<PlayerController>();

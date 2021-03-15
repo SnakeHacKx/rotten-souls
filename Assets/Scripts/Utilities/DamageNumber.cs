@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// <para>[ESTA CLASE NO ESTÁ EN USO]</para>
+/// Hace salir unos números en pantalla que indican el daño causado por el jugador al enemigo
+/// </summary>
 public class DamageNumber : MonoBehaviour
 {
     [SerializeField]

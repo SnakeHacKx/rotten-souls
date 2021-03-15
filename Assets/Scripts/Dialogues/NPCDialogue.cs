@@ -1,35 +1,57 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// Contiene todos los métodos referentes a los diálogos de los NPC's.
+/// <list type="bullet">
+/// <item>
+/// <term>OnTriggerEnter2D</term>
+/// <description>Analiza si el jugador entro en la zona de diálogo.</description>
+/// </item>
+/// <item>
+/// <term>OnTriggerEnter2D</term>
+/// <description>Analiza si el jugador salió de la zona de diálogo.</description>
+/// </item>
+/// </list>
+/// </summary>
 [RequireComponent(typeof(CircleCollider2D))]
 public class NPCDialogue : MonoBehaviour
 {
-    [SerializeField]
-    private string npcName;
+    [Tooltip("Nombre que desea que posea el NPC")]
+    [SerializeField] private string npcName;
 
-    [SerializeField]
-    private string[] npcDialogueLines;
+    [Tooltip("Son las diferentes líneas de diálogo del NPC")]
+    [SerializeField] private string[] npcDialogueLines;
 
+    // Referencia al manager de los diálogos
     private DialogueManager dialogueManager;
+
+    // Variable booleana que indica si el jugador está o no dentro de la zona de diálogo
+    // de un NPC
     private bool playerInTheZone;
 
-    void Start()
+    private void Start()
     {
-        // recordar que esto sólo se puede hacer la siguiente línea, si y sólo si hay un solo
-        // objeto de una categoría en la escena... en este caso solamente hay un objeto que
-        // tiene el DialogueManager
+        // Recordar que: FindObjectOfType sólo se usa cuando solamente hay un game object
+        // en toda la escena que tenga el script llamado entre diamantes < >
         dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
+    /// <summary>
+    /// Analiza si el jugador entro en la zona de diálogo.
+    /// </summary>
+    /// <param name="collision">Guarda la colisión</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             playerInTheZone = true;
-        } 
+        }
     }
 
+    /// <summary>
+    /// Analiza si el jugador salió de la zona de diálogo.
+    /// </summary>
+    /// <param name="collision">Guarda la colisión</param>
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -38,15 +60,19 @@ public class NPCDialogue : MonoBehaviour
         }
     }
 
-    void Update()
+    /// <summary>
+    /// Envía las líneas de diálogo al método <c>ShowDialogue()</c> de
+    /// la clase mánager de los diálogos
+    /// </summary>
+    private void Update()
     {
-        if(playerInTheZone && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button3)))
+        if (playerInTheZone && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button3)))
         {
             string[] finalDialogue = new string[npcDialogueLines.Length];
 
             int i = 0;
             // Para cada línea de diálogo en npcDialogueLines
-            foreach(string line in npcDialogueLines)
+            foreach (string line in npcDialogueLines)
             {
                 finalDialogue[i++] = ((npcName != null) ? npcName + "\n" : "") + line;
             }

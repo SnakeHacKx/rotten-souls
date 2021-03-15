@@ -3,20 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Controla el cambio de escenas y los puntos de inicio y teletransporte.
+/// <list type="bullet">
+/// <item>
+/// <term>Teleport</term>
+/// <description>Teletransporta al jugador al punto especificado.</description>
+/// </item>
+/// </list>
+/// </summary>
 [RequireComponent(typeof(Collider2D))]
 public class GoToNewPlace : MonoBehaviour
 {
+    [Tooltip("Escena a la que el jugador será teletransportado")]
     [SerializeField] private SceneID levelToLoad;
 
-    [SerializeField]
-    [Tooltip("¿Necesita el jugador pulsar la tecla E para irse a un nuevo lugar?")]
-    private bool needsClick;
+    [Tooltip("¿Necesita el jugador una tecla especificada para irse a una nueva escena?")]
+    [SerializeField] private bool needsClick;
 
     //private SetCameraConfiner _setCameraConfiner;
 
     // identificador del start point al cual se quiere ir
     // public string uuid;
 
+    [Tooltip("Punto de inicio o teletransporte")]
     [SerializeField] private StartAndTeleportPointsID uuid;
 
     //private void Start()
@@ -34,6 +44,10 @@ public class GoToNewPlace : MonoBehaviour
         Teleport(collision.gameObject.tag);
     }
 
+    /// <summary>
+    /// Teletransporta al jugador a una nueva escena.
+    /// </summary>
+    /// <param name="objectTag">Contiene el tag de la colisión.</param>
     private void Teleport(string objectTag)
     {
         // Si el tag del gameObject que entra en collision con el collider que tenga
