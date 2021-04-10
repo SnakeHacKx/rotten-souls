@@ -1,0 +1,472 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &317270115818866070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 317270115818866059}
+  - component: {fileID: 317270115818866056}
+  - component: {fileID: 317270115818866057}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &317270115818866059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317270115818866070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2068340802989220224}
+  - {fileID: 2068340801672701135}
+  - {fileID: 2068340802187340630}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &317270115818866056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317270115818866070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c270969b5a4a5584f9791aaa64d4603e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &317270115818866057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317270115818866070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5cd0069bf8835409e599d5296327cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests:
+  - {fileID: 2068340802989220225}
+  - {fileID: 2068340801672701134}
+  - {fileID: 2068340802187340631}
+  itemCollected: {fileID: 0}
+  lastEnemyKilled: {fileID: 0}
+  block: {fileID: 0}
+--- !u!1001 &317270114964934760
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 317270115818866059}
+    m_Modifications:
+    - target: {fileID: 1788793806427503421, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_Name
+      value: Quest2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: questID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: needsItem
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: killsEnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: questTitle
+      value: 'Mision: A Matar Fantasmas'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: questStartText
+      value: Mata a 7 fantasmas... si es que eso tiene algun sentido...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: questCompleteText
+      value: Mision Cumplida! Mataste 7 fantasmas, no hay recompensa pero fue divertido
+        no?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: enemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: -5707613147397740006, guid: 6e1eef77cecd1734fbe01bbd9c77b55d,
+        type: 3}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: itemsNeeded.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: itemsNeeded.Array.data[0]
+      value: 
+      objectReference: {fileID: 8504323000642170979, guid: 432054df5c6fc7f4581275db23e6e74d,
+        type: 3}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: numberOfEnemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: numberOfEnemies.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 911d8b46fbdd67c4abd1557efd058977, type: 3}
+--- !u!4 &2068340802187340630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+    type: 3}
+  m_PrefabInstance: {fileID: 317270114964934760}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2068340802187340631 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+    type: 3}
+  m_PrefabInstance: {fileID: 317270114964934760}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf37d5a8b8a8d334a8e13e353d9e7fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &317270115229489854
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 317270115818866059}
+    m_Modifications:
+    - target: {fileID: 1788793806427503421, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_Name
+      value: Quest0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: questTitle
+      value: 'Mision Secreta:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: needsTextBox
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: questStartText
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: questCompleteText
+      value: Has encontrado una tumba extrana...
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 911d8b46fbdd67c4abd1557efd058977, type: 3}
+--- !u!4 &2068340802989220224 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+    type: 3}
+  m_PrefabInstance: {fileID: 317270115229489854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2068340802989220225 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+    type: 3}
+  m_PrefabInstance: {fileID: 317270115229489854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf37d5a8b8a8d334a8e13e353d9e7fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &317270116614168561
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 317270115818866059}
+    m_Modifications:
+    - target: {fileID: 1788793806427503421, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_Name
+      value: Quest1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: block
+      value: 
+      objectReference: {fileID: 1800103871195491936, guid: 06deae8c12f61a340ba0654a4299b561,
+        type: 3}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: questID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: openAWay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: needsItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: questTitle
+      value: 'Mision: Encuentra la Gema Eterea'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: questStartText
+      value: En lo mas recondito de estas tierras, se encuentra una gema, muchos
+        cuentas que, al poseerla, seras capaz de pasar por el gran fuego rojo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: blocks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: questCompleteText
+      value: Has encontrado la Gema Eterea, prueba suerte, quizas puedas pasar por
+        el fuego rojo... quizas...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: blocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1119813112, guid: 06deae8c12f61a340ba0654a4299b561,
+        type: 3}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: itemsNeeded.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+        type: 3}
+      propertyPath: itemsNeeded.Array.data[0]
+      value: 
+      objectReference: {fileID: 8504323000642170979, guid: 432054df5c6fc7f4581275db23e6e74d,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 911d8b46fbdd67c4abd1557efd058977, type: 3}
+--- !u!4 &2068340801672701135 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1788793806427503422, guid: 911d8b46fbdd67c4abd1557efd058977,
+    type: 3}
+  m_PrefabInstance: {fileID: 317270116614168561}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2068340801672701134 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1788793806427503423, guid: 911d8b46fbdd67c4abd1557efd058977,
+    type: 3}
+  m_PrefabInstance: {fileID: 317270116614168561}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf37d5a8b8a8d334a8e13e353d9e7fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

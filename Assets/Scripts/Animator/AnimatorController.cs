@@ -34,7 +34,8 @@ public class AnimatorController : MonoBehaviour
             _animator = GetComponent<Animator>();
         }
 
-        _animator.Play(animationID.ToString());
+        // todo: activar esto cuando tenga animaciones
+        //_animator.Play(animationID.ToString());
     }
 
     public void Pause()

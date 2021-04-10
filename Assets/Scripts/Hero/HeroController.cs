@@ -464,7 +464,8 @@ public class HeroController : MonoBehaviour, ITargetCombat
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
             // Comienza la corrutina del salto
-            StartCoroutine(HandleJumpAnimation());
+            //todo:avtivar corrutina de salto cuando tenga la animacion
+            //StartCoroutine(HandleJumpAnimation());
 
             canDoubleJump = true; 
         }
