@@ -17,7 +17,7 @@ using UnityEngine;
 /// </summary>
 [RequireComponent(typeof(GameObject))]
 [RequireComponent(typeof(TMP_Text))]
-[RequireComponent(typeof(PlayerController))]
+[RequireComponent(typeof(HeroController))]
 public class DialogueManager : MonoBehaviour
 {
     [Tooltip("Inserte la caja de la UI que contendrá los diálogos")]
@@ -35,15 +35,17 @@ public class DialogueManager : MonoBehaviour
     [Tooltip("Muestra la línea de diálogo actual")]
     [SerializeField] private int currentDialogueLine;
 
-    // Referencia a la clase PlayerController
-    private PlayerController playerController;
+    // Referencia a la clase HeroController
+    private HeroController playerController;
+    private QuestManager questManager;
 
     private void Start()
     {
         dialogueActive = false;
         dialogueBox.SetActive(false);
 
-        playerController = FindObjectOfType<PlayerController>();
+        playerController = FindObjectOfType<HeroController>();
+        questManager = FindObjectOfType<QuestManager>();
     }
 
     /// <summary>
@@ -64,6 +66,7 @@ public class DialogueManager : MonoBehaviour
             {
                 dialogueActive = false;
                 dialogueBox.SetActive(false);
+                FindObjectOfType<UIManager>().hud.SetActive(true);
                 currentDialogueLine = 0;
                 playerController.isTalking = false;
             }
@@ -86,6 +89,8 @@ public class DialogueManager : MonoBehaviour
         currentDialogueLine = 0;
         dialogueLines = lines;
         dialogueActive = true;
+        FindObjectOfType<UIManager>().hud.SetActive(false);
+        HeroController.SharedInstance.SetIdleAnimToPlayer();
         dialogueBox.SetActive(true);
         dialogueText.text = dialogueLines[currentDialogueLine];
         playerController.isTalking = true;

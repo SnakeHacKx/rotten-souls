@@ -2,56 +2,93 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// <para>Mánager del audio.</para>
-/// Contiene todos los métodos referentes al audio del juego.
-/// <list type="bullet">
-/// <item>
-/// <term>Update</term>
-/// <description>Analiza si el audio puede ser reproducido y lo hace o no según el resultado.</description>
-/// </item>
-/// <item>
-/// <term>PlayNewTrack</term>
-/// <description>Reproduce un nuevo track.</description>
-/// </item>
-/// </list>
-/// </summary>
 public class AudioManager : MonoBehaviour
 {
-    [Tooltip("Inserte los tracks que desea reproducir")]
-    [SerializeField] private AudioSource[] audioTracks;
-    // Track actual
-    public int currentTrack;
-    // Variable booleana que permite saber si la canción puede o no sonar en determinada zona o momento
-    public bool audioCanBePlayed;
+    [Range(0, 1)]
+    [SerializeField] private float musicVolume;
+    private float _musicVolume;
 
-    /// <summary>
-    /// Analiza si el audio puede ser reproducido y lo hace o no según el resultado.
-    /// <para>Si no puede reproducirlo, detiene el audio en reproducción</para>
-    /// </summary>
-    private void Update()
+    [Range(0, 1)]
+    [SerializeField] private float sfxVolume;
+    private float _sfxVolume;
+
+    private static AudioSource musicAudioSource;
+    private static AudioSource sfxAudioSource;
+
+    private static AudioManager _sharedInstance;
+
+    public static AudioManager SharedInstance
     {
-        if (audioCanBePlayed)
+        get
         {
-            if (!audioTracks[currentTrack].isPlaying)
+            if(_sharedInstance == null)
             {
-                audioTracks[currentTrack].Play();
+                _sharedInstance = FindObjectOfType<AudioManager>();
+
+                GameObject gameAudioManager;
+
+                if(_sharedInstance == null)
+                {
+                    gameAudioManager = new GameObject("AudioManager");
+                    gameAudioManager.AddComponent<AudioManager>();
+                    _sharedInstance = gameAudioManager.GetComponent<AudioManager>();
+                }
+
+                if (_sharedInstance != null)
+                {
+                    var gameMusic = new GameObject("Music");
+                    gameMusic.AddComponent<AudioSource>();
+                    musicAudioSource = gameMusic.GetComponent<AudioSource>();
+                    gameMusic.transform.parent = _sharedInstance.gameObject.transform;
+
+                    var gameSFX = new GameObject("SFX");
+                    gameSFX.AddComponent<AudioSource>();
+                    sfxAudioSource = gameSFX.GetComponent<AudioSource>();
+                    gameSFX.transform.parent = _sharedInstance.gameObject.transform;
+
+                    DontDestroyOnLoad(_sharedInstance.gameObject);
+                }
             }
-        }
-        else
-        {
-            audioTracks[currentTrack].Stop();
+
+            return _sharedInstance;
         }
     }
 
-    /// <summary>
-    /// Reproduce un nuevo track.
-    /// </summary>
-    /// <param name="newTrack">Nuevo track a reproducir.</param>
-    public void PlayNewTrack(int newTrack)
+    public void PlaySFX(AudioClip audioClip)
     {
-        audioTracks[currentTrack].Stop();
-        currentTrack = newTrack;
-        audioTracks[currentTrack].Play();
+        // Reproduce el audio una sola vez
+        if (audioClip != null)
+            sfxAudioSource.PlayOneShot(audioClip);
+    }
+    
+    public void PlayMusic(AudioClip audioClip)
+    {
+        // Para evitar que se repita
+        if(musicAudioSource.clip != audioClip)
+        {
+            musicAudioSource.clip = audioClip;
+            musicAudioSource.loop = true;
+            musicAudioSource.Play();
+        }
+    }
+
+    private void Update()
+    {
+        //Debug.Log("POS DEL PLAYER EN AUDIO MANAGER: " + HeroController.SharedInstance.transform.position);  
+        // si esto se cumple es porque el usuario modificó la música
+        // se reasigna para que no haya problemas
+        if(musicVolume != _musicVolume)
+        {
+            _musicVolume = musicVolume;
+            if (musicAudioSource != null)
+                musicAudioSource.volume = musicVolume;
+        }
+
+        if (sfxVolume != _sfxVolume)
+        {
+            _sfxVolume = sfxVolume;
+            if (sfxAudioSource != null)
+                sfxAudioSource.volume = sfxVolume;
+        }
     }
 }

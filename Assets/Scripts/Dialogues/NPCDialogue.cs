@@ -45,6 +45,7 @@ public class NPCDialogue : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             playerInTheZone = true;
+            InteractWarning.SharedInstance.ShowInteractWarning();
         }
     }
 
@@ -57,6 +58,7 @@ public class NPCDialogue : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             playerInTheZone = false;
+            InteractWarning.SharedInstance.HideInteractWarning();
         }
     }
 
@@ -66,7 +68,7 @@ public class NPCDialogue : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (playerInTheZone && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button3)))
+        if (playerInTheZone && (Input.GetKeyDown(KeyCode.Y) || Input.GetKeyDown(KeyCode.Joystick1Button3)))
         {
             string[] finalDialogue = new string[npcDialogueLines.Length];
 

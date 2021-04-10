@@ -4,10 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Floor
-  - MyNewConfiner
-  - VirtualCamera
   - Enemy
+  - Ground
+  - SpikeSurrounding
+  - VirtualCamera
+  - CameraConfiner
   layers:
   - Default
   - TransparentFX
@@ -18,10 +19,10 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Block
+  - Spike Surrounding
   - 
   - 
   - 
@@ -42,18 +43,33 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 3585780255
-    locked: 0
-  - name: Middleground
-    uniqueID: 3923675133
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Foreground
-    uniqueID: 116088839
+  - name: Background
+    uniqueID: 3996551929
+    locked: 0
+  - name: Props
+    uniqueID: 3827909543
+    locked: 0
+  - name: Quest Item
+    uniqueID: 97653627
+    locked: 0
+  - name: Ground
+    uniqueID: 4156825057
+    locked: 0
+  - name: Spikes
+    uniqueID: 965415929
+    locked: 0
+  - name: Block
+    uniqueID: 609488001
+    locked: 0
+  - name: Characters
+    uniqueID: 3034620055
+    locked: 0
+  - name: PowerUps
+    uniqueID: 4165549621
     locked: 0
   - name: UI
-    uniqueID: 2902411231
+    uniqueID: 1930112713
     locked: 0
