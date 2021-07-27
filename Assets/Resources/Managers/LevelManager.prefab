@@ -43,9 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045554645009dfd4ba5415a850e77b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelMusic: {fileID: 8300000, guid: ea948757626aedb418a3bdcbdd6866c4, type: 3}
+  levelMusic: {fileID: 8300000, guid: 07158200c510fec43a8cb43250e10a82, type: 3}
   levelAmbientSound: {fileID: 0}
   finalBossMusic: {fileID: 0}
   isFinalBoss: 0
   finalBoss: {fileID: 0}
+  confinerTag: 5
   cameraSize: 0
+  levelBackground: {fileID: 21300000, guid: 9800410165469ea448c4554d5cf13b59, type: 3}
+  backgroundScale: {x: 5, y: 5, z: 0}

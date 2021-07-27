@@ -100,7 +100,7 @@ public class TitleScreenController : MonoBehaviour
         GameManager.SharedInstance.GetComponent<GameManager>();
         NewGameFromTitleScreen?.Invoke();
         //print("SE debió invoncar el evento del start new game");
-        SceneHelper.SharedInstance.LoadScene(SceneID.Level1_1);
+        SceneHelper.SharedInstance.LoadScene(SceneID.Greed1_1);
         IsInMainMenu?.Invoke(true);
 
         if(HeroController.SharedInstance != null)

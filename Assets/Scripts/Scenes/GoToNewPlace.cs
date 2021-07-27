@@ -16,17 +16,17 @@ public class GoToNewPlace : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log("El UUID del TP de la escena level1_4 es: " + uuid.ToString());
-        Teleport(collision.gameObject.name);
+        Teleport(collision.gameObject.tag);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Teleport(collision.gameObject.name);
+        Teleport(collision.gameObject.tag);
     }
 
     private void Teleport(string objName) //objName = nombre del objeto
     {
-        if (objName == "Hero")
+        if (objName == TagID.Player.ToString())
         {
             if (!needsClick || needsClick && Input.GetMouseButtonDown(0))
             {

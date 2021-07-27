@@ -49,7 +49,7 @@ public class SceneHelper : MonoBehaviour
     {
         Debug.Log("He muerto sin haber guardado el juego, reiniciando el juego...");
         HeroController.SharedInstance.SetPlayerToNewGameStatus();
-        SceneManager.LoadScene(SceneID.Level1_1.ToString());
+        SceneManager.LoadScene(SceneID.Greed1_1.ToString());
     }
 
     public void GoToLastCheckPoint()

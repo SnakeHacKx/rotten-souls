@@ -90,6 +90,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2754571241768741965, guid: 4a2c41caa6ef8884cb0449f32cf0c82a,
         type: 3}
+      propertyPath: npcDialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754571241768741965, guid: 4a2c41caa6ef8884cb0449f32cf0c82a,
+        type: 3}
       propertyPath: npcDialogueLines.Array.data[0]
       value: Un forestero, es bueno ver caras nuevas por aqui
       objectReference: {fileID: 0}
@@ -97,7 +102,8 @@ PrefabInstance:
         type: 3}
       propertyPath: npcDialogueLines.Array.data[1]
       value: Veo que no estas bien equipado, pero no te preocupes. Escuche a algunos
-        habitantes de este pequeno pueblo
+        habitantes de este pequeno pueblo hablar sobre un gran forjador de espadas
+        que vive en una cueva cerca de aqui.
       objectReference: {fileID: 0}
     - target: {fileID: 2754571241768741965, guid: 4a2c41caa6ef8884cb0449f32cf0c82a,
         type: 3}

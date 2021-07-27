@@ -8,32 +8,28 @@ using UnityEngine;
 /// </summary>
 public enum StartAndTeleportPointsID
 {
+    //todo: Se debe cambiar la forma en que esto trabaja, ya que si se agrega un nivel...
+    // en medio de otros, el orden se trastoca y entonces tendria que cambiar todo el juego
+    // Puede ser una lista o un diccionario, no se
     nothing,
     gameStart,
 
-    // Level1_1
-    level1_1FromLevel1_2,
-    level1_1FromLevel1_4,
-    level1_1FromLevel1_5,
+    // Greed1
+    greed1_Greed2,
+    greed1_Greed4,
+    greed1_Greed5,
 
-    // Level1_2
-    level1_2FromLevel1_1,
-    level1_2FromLevel1_3,
-    level1_2FromCheck1_1,
+    // Greed2
+    greed2_Greed1,
+    greed2_Greed3,
 
-    // Level1_3
-    level1_3FromLevel1_2,
-    level1_3FromCheck1_2,
-    level1_3FromCheck1_5,
+    // Greed3
+    greed3_Greed2,
 
-    // Level1_4
-    level1_4FromLevel1_1,
+    // Greed4
+    greed4_Greed1,
 
-    // Level1_5
-    level1_5FromLevel1_1,
-    level1_5FromLevel1_3,
-
-    // Checks
-    check1_1FromLevel1_2,
-    check1_2FromLevel1_3
+    // Greed5
+    greed5_Greed1,
+    greed5_Greed3,
 }
