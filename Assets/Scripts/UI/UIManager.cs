@@ -72,7 +72,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowPauseScreen()
     {
-        if (!GameManager.SharedInstance.GamePaused)
+        if (!GameManager.SharedInstance.GamePaused && !GameManager.SharedInstance.InInventoryScreen)
         {
             PauseScreen.SharedInstance.ShowPauseScreen();
             HeroController.SharedInstance.SetIsControlable(false);

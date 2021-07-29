@@ -32,9 +32,8 @@ public class PauseScreen : MonoBehaviour
                     var gameObj = Resources.Load("UI/PauseScreen") as GameObject;
                     gameObj = Instantiate(gameObj, Vector3.zero, Quaternion.identity);
                     _sharedInstance = gameObj.GetComponent<PauseScreen>();
-                    var eventSystem = FindObjectOfType<EventSystem>();
-
-                    if (eventSystem == null)
+                    
+                    if (!FindObjectOfType<EventSystem>())
                     {
                         var gameObjES = new GameObject("EventSystem");
                         gameObjES.AddComponent<EventSystem>();
@@ -50,7 +49,6 @@ public class PauseScreen : MonoBehaviour
 
     public void PauseGame()
     {
-        
         GameManager.SharedInstance.GamePaused = true;
         gamePaused = true;
     }
