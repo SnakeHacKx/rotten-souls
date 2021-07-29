@@ -1,0 +1,1520 @@
+fileFormatVersion: 2
+guid: 44278364304fd754ea4947d304c664bf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5048099183019273450
+    second: PlayStation 2 - Chaos Wars - Weapons_0
+  - first:
+      213: -7415351580650280731
+    second: PlayStation 2 - Chaos Wars - Weapons_1
+  - first:
+      213: -7500918334951540953
+    second: PlayStation 2 - Chaos Wars - Weapons_2
+  - first:
+      213: 3490064728942641636
+    second: PlayStation 2 - Chaos Wars - Weapons_3
+  - first:
+      213: 4609208674211017138
+    second: PlayStation 2 - Chaos Wars - Weapons_4
+  - first:
+      213: 4816253778658578181
+    second: PlayStation 2 - Chaos Wars - Weapons_5
+  - first:
+      213: 4749402694881645270
+    second: PlayStation 2 - Chaos Wars - Weapons_6
+  - first:
+      213: 7489459496180409630
+    second: PlayStation 2 - Chaos Wars - Weapons_7
+  - first:
+      213: -8030313074576054114
+    second: PlayStation 2 - Chaos Wars - Weapons_8
+  - first:
+      213: -1045109502362322580
+    second: PlayStation 2 - Chaos Wars - Weapons_9
+  - first:
+      213: -147610788885685899
+    second: PlayStation 2 - Chaos Wars - Weapons_10
+  - first:
+      213: -6307061809329666490
+    second: PlayStation 2 - Chaos Wars - Weapons_11
+  - first:
+      213: 2405754457822567200
+    second: PlayStation 2 - Chaos Wars - Weapons_12
+  - first:
+      213: -1591799813162545694
+    second: PlayStation 2 - Chaos Wars - Weapons_13
+  - first:
+      213: -8245247414241355706
+    second: PlayStation 2 - Chaos Wars - Weapons_14
+  - first:
+      213: 6890914090072034032
+    second: PlayStation 2 - Chaos Wars - Weapons_15
+  - first:
+      213: -3952709119944340044
+    second: PlayStation 2 - Chaos Wars - Weapons_16
+  - first:
+      213: -5412829452888282874
+    second: PlayStation 2 - Chaos Wars - Weapons_17
+  - first:
+      213: -9163209458069851872
+    second: PlayStation 2 - Chaos Wars - Weapons_18
+  - first:
+      213: 4691173374307173217
+    second: PlayStation 2 - Chaos Wars - Weapons_19
+  - first:
+      213: 117013716922913003
+    second: PlayStation 2 - Chaos Wars - Weapons_20
+  - first:
+      213: -101864672186087636
+    second: PlayStation 2 - Chaos Wars - Weapons_21
+  - first:
+      213: -2914095076450933874
+    second: PlayStation 2 - Chaos Wars - Weapons_22
+  - first:
+      213: 5278092642623164841
+    second: PlayStation 2 - Chaos Wars - Weapons_23
+  - first:
+      213: -8772552138605464671
+    second: PlayStation 2 - Chaos Wars - Weapons_24
+  - first:
+      213: -6534538509171050371
+    second: PlayStation 2 - Chaos Wars - Weapons_25
+  - first:
+      213: -3150323386190372175
+    second: PlayStation 2 - Chaos Wars - Weapons_26
+  - first:
+      213: 3104424386806907876
+    second: PlayStation 2 - Chaos Wars - Weapons_27
+  - first:
+      213: 4812012913422197248
+    second: PlayStation 2 - Chaos Wars - Weapons_28
+  - first:
+      213: -1813993847858213391
+    second: PlayStation 2 - Chaos Wars - Weapons_29
+  - first:
+      213: -2779229680292593515
+    second: PlayStation 2 - Chaos Wars - Weapons_30
+  - first:
+      213: 3018476795281928540
+    second: PlayStation 2 - Chaos Wars - Weapons_31
+  - first:
+      213: -4980417424209417198
+    second: PlayStation 2 - Chaos Wars - Weapons_32
+  - first:
+      213: -7145608619721360860
+    second: PlayStation 2 - Chaos Wars - Weapons_33
+  - first:
+      213: -1546205698210087438
+    second: PlayStation 2 - Chaos Wars - Weapons_34
+  - first:
+      213: 402550079070345772
+    second: PlayStation 2 - Chaos Wars - Weapons_35
+  - first:
+      213: -3042079590173750241
+    second: PlayStation 2 - Chaos Wars - Weapons_36
+  - first:
+      213: -6746634192580320992
+    second: PlayStation 2 - Chaos Wars - Weapons_37
+  - first:
+      213: 7421832976034004441
+    second: PlayStation 2 - Chaos Wars - Weapons_38
+  - first:
+      213: 3297853451227448231
+    second: PlayStation 2 - Chaos Wars - Weapons_39
+  - first:
+      213: -7468967293253748679
+    second: PlayStation 2 - Chaos Wars - Weapons_40
+  - first:
+      213: -9037504343150317595
+    second: PlayStation 2 - Chaos Wars - Weapons_41
+  - first:
+      213: 6137840307296865988
+    second: PlayStation 2 - Chaos Wars - Weapons_42
+  - first:
+      213: 7059774574737931453
+    second: PlayStation 2 - Chaos Wars - Weapons_43
+  - first:
+      213: 4578915318732695066
+    second: PlayStation 2 - Chaos Wars - Weapons_44
+  - first:
+      213: 3907434544379949073
+    second: PlayStation 2 - Chaos Wars - Weapons_45
+  - first:
+      213: 5370857239458118145
+    second: PlayStation 2 - Chaos Wars - Weapons_46
+  - first:
+      213: -6997249216315989621
+    second: PlayStation 2 - Chaos Wars - Weapons_47
+  - first:
+      213: -8340326077076497351
+    second: PlayStation 2 - Chaos Wars - Weapons_48
+  - first:
+      213: -1359617896429725707
+    second: PlayStation 2 - Chaos Wars - Weapons_49
+  - first:
+      213: -8212877408813700127
+    second: PlayStation 2 - Chaos Wars - Weapons_50
+  - first:
+      213: 1565126442518465816
+    second: PlayStation 2 - Chaos Wars - Weapons_51
+  - first:
+      213: -8019522018282520579
+    second: PlayStation 2 - Chaos Wars - Weapons_52
+  - first:
+      213: 7817583837157906935
+    second: PlayStation 2 - Chaos Wars - Weapons_53
+  - first:
+      213: -4521178997479240808
+    second: PlayStation 2 - Chaos Wars - Weapons_54
+  - first:
+      213: -4055619019163307389
+    second: PlayStation 2 - Chaos Wars - Weapons_55
+  - first:
+      213: 8486916450631933196
+    second: PlayStation 2 - Chaos Wars - Weapons_56
+  - first:
+      213: -4565370707742538724
+    second: PlayStation 2 - Chaos Wars - Weapons_57
+  - first:
+      213: -5730562116521026069
+    second: PlayStation 2 - Chaos Wars - Weapons_58
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 784
+        width: 93
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613523df98c81f9b0800000000000000
+      internalID: -5048099183019273450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 791
+        width: 123
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e865be8601671990800000000000000
+      internalID: -7415351580650280731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_2
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 781
+        width: 102
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727bff3148267e790800000000000000
+      internalID: -7500918334951540953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_3
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 791
+        width: 96
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e10fbb31633f6030800000000000000
+      internalID: 3490064728942641636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_4
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 792
+        width: 115
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b13ff95ed237ff30800000000000000
+      internalID: 4609208674211017138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_5
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 787
+        width: 115
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50fc3194b45c6d240800000000000000
+      internalID: 4816253778658578181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_6
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 789
+        width: 114
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d214bb669449e140800000000000000
+      internalID: 4749402694881645270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_7
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 788
+        width: 114
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15628d1bb7efe760800000000000000
+      internalID: 7489459496180409630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_8
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 795
+        width: 110
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9828ba1ec89e8090800000000000000
+      internalID: -8030313074576054114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 664
+        width: 112
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69fe40e1760f71f0800000000000000
+      internalID: -1045109502362322580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_10
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 659
+        width: 108
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579147305c493fdf0800000000000000
+      internalID: -147610788885685899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_11
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 662
+        width: 112
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646097e53b0d878a0800000000000000
+      internalID: -6307061809329666490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_12
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 663
+        width: 111
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b9353eee4f26120800000000000000
+      internalID: 2405754457822567200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_13
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 664
+        width: 108
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edc9eee08ac8e9e0800000000000000
+      internalID: -1591799813162545694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_14
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 655
+        width: 109
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6489fe4792ff29d80800000000000000
+      internalID: -8245247414241355706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_15
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 659
+        width: 109
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa4a74fad171af50800000000000000
+      internalID: 6890914090072034032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_16
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 659
+        width: 106
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd454d6ff72529c0800000000000000
+      internalID: -3952709119944340044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_17
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 658
+        width: 117
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60962de7a44c1e4b0800000000000000
+      internalID: -5412829452888282874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 532
+        width: 117
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0213f31fb8db5d080800000000000000
+      internalID: -9163209458069851872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_19
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 526
+        width: 114
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163895b34556a1140800000000000000
+      internalID: 4691173374307173217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_20
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 533
+        width: 102
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0d9070b57bf9100800000000000000
+      internalID: 117013716922913003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_21
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 527
+        width: 119
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27cf2fce9a169ef0800000000000000
+      internalID: -101864672186087636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_22
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 535
+        width: 107
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e836d6ea7fd0f87d0800000000000000
+      internalID: -2914095076450933874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_23
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 532
+        width: 106
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1182f3b4d8f3940800000000000000
+      internalID: 5278092642623164841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_24
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 530
+        width: 106
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3f3d41f42a14680800000000000000
+      internalID: -8772552138605464671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_25
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 534
+        width: 111
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78bfbde8d7a055a0800000000000000
+      internalID: -6534538509171050371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_26
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 530
+        width: 91
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b26486429dc744d0800000000000000
+      internalID: -3150323386190372175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_27
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 396
+        width: 109
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e38fa72881251b20800000000000000
+      internalID: 3104424386806907876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_28
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 418
+        width: 121
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0026f17ef34b7c240800000000000000
+      internalID: 4812012913422197248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_29
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 398
+        width: 115
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdcaa1d43663d6e0800000000000000
+      internalID: -1813993847858213391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_30
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 400
+        width: 103
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59000fca4513e69d0800000000000000
+      internalID: -2779229680292593515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_31
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 401
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51f98917a8c3e920800000000000000
+      internalID: 3018476795281928540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_32
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 402
+        width: 110
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ce4d47db002eab0800000000000000
+      internalID: -4980417424209417198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_33
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 406
+        width: 96
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42af985c1d2b5dc90800000000000000
+      internalID: -7145608619721360860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_34
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 397
+        width: 87
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdb0801c16ca8ae0800000000000000
+      internalID: -1546205698210087438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_35
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 398
+        width: 107
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a1b430a25269500800000000000000
+      internalID: 402550079070345772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_36
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 276
+        width: 105
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c4a39fabc58c5d0800000000000000
+      internalID: -3042079590173750241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 277
+        width: 66
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021eeb172f32f52a0800000000000000
+      internalID: -6746634192580320992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_38
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 268
+        width: 101
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd79c6e4c5aff660800000000000000
+      internalID: 7421832976034004441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_39
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 273
+        width: 101
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a345b9bd3454cd20800000000000000
+      internalID: 3297853451227448231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_40
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 265
+        width: 111
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938799ea1d5e85890800000000000000
+      internalID: -7468967293253748679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_41
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 272
+        width: 115
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5efa972cea5549280800000000000000
+      internalID: -9037504343150317595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_42
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 273
+        width: 117
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce01846d3dfd2550800000000000000
+      internalID: 6137840307296865988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_43
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 278
+        width: 110
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcb699429b59f160800000000000000
+      internalID: 7059774574737931453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_44
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 272
+        width: 115
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1628a5e8339b8f30800000000000000
+      internalID: 4578915318732695066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_45
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 136
+        width: 97
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1107bd0040ff93630800000000000000
+      internalID: 3907434544379949073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_46
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 153
+        width: 104
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a7c39043e198a40800000000000000
+      internalID: 5370857239458118145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_47
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 142
+        width: 96
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81ea9829e6c4ee90800000000000000
+      internalID: -6997249216315989621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_48
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 149
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c9de03f95314c80800000000000000
+      internalID: -8340326077076497351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_49
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 148
+        width: 73
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7da0d0abaa12de0800000000000000
+      internalID: -1359617896429725707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_50
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 136
+        width: 92
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb24d7a28ff50e80800000000000000
+      internalID: -8212877408813700127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_51
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 147
+        width: 104
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d42e2053278b510800000000000000
+      internalID: 1565126442518465816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_52
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 150
+        width: 83
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dffb8dfa63fe4b090800000000000000
+      internalID: -8019522018282520579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_53
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 140
+        width: 99
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9d1af9413ad7c60800000000000000
+      internalID: 7817583837157906935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_54
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 18
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b0b41f7ab8141c0800000000000000
+      internalID: -4521178997479240808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_55
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 13
+        width: 109
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382f37a5dfb87b7c0800000000000000
+      internalID: -4055619019163307389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_56
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 11
+        width: 111
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0dd556db8597c570800000000000000
+      internalID: 8486916450631933196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_57
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 14
+        width: 104
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c144809978b84a0c0800000000000000
+      internalID: -4565370707742538724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation 2 - Chaos Wars - Weapons_58
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 1
+        width: 116
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed1479ed14f870b0800000000000000
+      internalID: -5730562116521026069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
