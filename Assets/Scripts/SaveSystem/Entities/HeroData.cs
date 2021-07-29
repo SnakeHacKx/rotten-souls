@@ -9,6 +9,8 @@ public class HeroData
     public int powerUpAmount;
     public int coinsAmount;
     public int health;
+    //public float[] position = new float[3];
+    
     public float lastPositionX;
     public float lastPositionY;
     public float lastPositionZ;

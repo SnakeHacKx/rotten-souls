@@ -31,6 +31,18 @@ public class HeroController : MonoBehaviour, ITargetCombat
         }
     }
 
+    public PowerUpID CurrentPowerUpID
+    {
+        get
+        {
+            return currentPowerUp;
+        }
+        set
+        {
+            currentPowerUp = value;
+        }
+    }
+
     [Header("Attack Variables")]
     [SerializeField] SwordController swordController;
     [SerializeField] float delayAttack;

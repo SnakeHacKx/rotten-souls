@@ -166,7 +166,12 @@ public class GameManager : MonoBehaviour
             gameData = new GameData();
 
         }
-        gameData.heroData.currentPowerUpID = currentPowerUpID;
+
+        if (powerUpAmount > 0)
+        {
+            gameData.heroData.currentPowerUpID = currentPowerUpID;
+        }
+
         gameData.heroData.powerUpAmount = powerUpAmount;
         gameData.heroData.coinsAmount = HeroController.SharedInstance.Coins;
         gameData.heroData.health = HeroController.SharedInstance.Health;
@@ -220,4 +225,24 @@ public class GameManager : MonoBehaviour
         position.z = data.position[2];
         HeroController.SharedInstance.transform.position = position;
     }*/
+
+    public void SavePlayer()
+    {
+        SaveGameSystem.SavePlayer(HeroController.SharedInstance);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveGameSystem.LoadPlayer();
+        HeroController.SharedInstance.CurrentPowerUpID = data.currentPowerUpID;
+        HeroController.SharedInstance.Health = data.health;
+        HeroController.SharedInstance.PowerUpAmount = data.powerUpAmount;
+        HeroController.SharedInstance.Coins = data.coinsAmount;
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        HeroController.SharedInstance.transform.position = position;
+    }
 }
