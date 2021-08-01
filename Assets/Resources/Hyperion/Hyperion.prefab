@@ -149,7 +149,6 @@ GameObject:
   - component: {fileID: 8001960352035673595}
   - component: {fileID: 8001960352035673594}
   - component: {fileID: 8001960352035673597}
-  - component: {fileID: 8001960352035673596}
   - component: {fileID: 3867201998313002943}
   m_Layer: 9
   m_Name: Hyperion
@@ -216,52 +215,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &8001960352035673596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8001960352035673599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc1935953a0ddc458108e061e380414, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentPowerUp: 0
-  bluePotionLauncher: {fileID: 8001960352220328627}
-  redPotionLauncher: {fileID: 8001960352959541152}
-  _powerUpAmount: 0
-  swordController: {fileID: 8001960352244940454}
-  delayAttack: 0.1
-  attackDuration: 0.3
-  initialHealh: 10
-  _health: 0
-  damageFeedbackEffect: {fileID: 8001960352135367971}
-  animatorController: {fileID: 6532369217137898123, guid: 0fdddded9e1b1e44a8a83ca3df137d64,
-    type: 3}
-  footA: {fileID: 8001960352489995955}
-  footB: {fileID: 8001960351738911284}
-  canCheckGround: 0
-  canMove: 0
-  canFlip: 0
-  canDoubleJump: 0
-  playerIsAttacking: 0
-  playerIsRecovering: 0
-  isLookingRight: 0
-  playerIsUsingPowerUp: 0
-  playerIsFalling: 0
-  speed: 7
-  jumpForce: 5.7
-  doubleJumpForce: 10
-  damageForce: 7
-  damageForceUp: 5
-  spikeDamageForceUp: 12
-  attackSFX: {fileID: 8300000, guid: c260a52868f277848bf9a80d3467a26c, type: 3}
-  healthUpSFX: {fileID: 8300000, guid: 4e4108bd6461fb2488328562ca6545bf, type: 3}
-  movementDirection: {x: 0, y: 0}
-  isTalking: 0
-  jumpTime: 0.45
 --- !u!114 &3867201998313002943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +274,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -621,18 +575,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75eb4e43d9a5d1041aaa40829046c748, type: 3}
---- !u!114 &8001960352489995955 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2009716918196751017, guid: 75eb4e43d9a5d1041aaa40829046c748,
-    type: 3}
-  m_PrefabInstance: {fileID: 8426057232845190170}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f02e362e95d8359459682092e0b862ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &8001960352489995952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2009716918196751018, guid: 75eb4e43d9a5d1041aaa40829046c748,

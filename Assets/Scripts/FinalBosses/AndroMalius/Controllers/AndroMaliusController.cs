@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AndroMaliusController : MonoBehaviour, ITargetCombat
 {
-
     public enum AndroiMaliusState
     {
         Presentation,
@@ -133,7 +132,7 @@ public class AndroMaliusController : MonoBehaviour, ITargetCombat
 
             yield return new WaitForSeconds(Time.deltaTime);
         }
-        var positionX = HeroController.SharedInstance.transform.position.x;
+        var positionX = Player.Instance.transform.position.x;
         yield return new WaitForSeconds(0.4f);
 
         canFloat = true;
@@ -185,7 +184,7 @@ public class AndroMaliusController : MonoBehaviour, ITargetCombat
         {
             feedbackProjectile.SetActive(true);
 
-            var direction = (HeroController.SharedInstance.transform.position - this.transform.position).normalized;
+            var direction = (Player.Instance.transform.position - this.transform.position).normalized;
             HandleFlip(direction.x);
 
             yield return new WaitForSeconds(0.6f);

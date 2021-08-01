@@ -19,7 +19,7 @@ public class CoinController : MonoBehaviour
 
         if (collision.gameObject.CompareTag(playerTag.ToString()))
         {
-            HeroController.SharedInstance.GiveCoin();
+            Player.Instance.GiveCoin();
             AudioManager.SharedInstance.PlaySFX(pickSFX);
             Destroy(this.gameObject);
         }

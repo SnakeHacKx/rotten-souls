@@ -103,9 +103,9 @@ public class TitleScreenController : MonoBehaviour
         SceneHelper.SharedInstance.LoadScene(SceneID.Greed1_1);
         IsInMainMenu?.Invoke(true);
 
-        if(HeroController.SharedInstance != null)
+        if(Player.Instance != null)
         {
-            HeroController.SharedInstance.SetPlayerToNewGameStatus();
+            Player.Instance.SetPlayerToNewGameStatus();
         }
     }
 }

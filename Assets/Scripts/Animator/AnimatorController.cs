@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Newtonsoft.Json.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,6 +22,24 @@ public class AnimatorController : MonoBehaviour
 {
     private Animator _animator;
 
+    private static AnimatorController _sharedInstance;
+    
+    public static AnimatorController Instance
+    {
+        get
+        {
+            if (_sharedInstance == null)
+            {
+                _sharedInstance = FindObjectOfType<AnimatorController>();
+            }
+            return _sharedInstance;
+        }
+        set
+        {
+            _sharedInstance = value;
+        }
+    }
+
     void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -34,8 +53,8 @@ public class AnimatorController : MonoBehaviour
             _animator = GetComponent<Animator>();
         }
 
-        // todo: activar esto cuando tenga animaciones
-        //_animator.Play(animationID.ToString());
+        // todo: activar/desactivar animaciones
+        _animator.Play(animationID.ToString());
     }
 
     public void Pause()

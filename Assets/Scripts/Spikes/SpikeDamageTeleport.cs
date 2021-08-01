@@ -33,9 +33,9 @@ public class SpikeDamageTeleport : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(targetTag.ToString()))
         { 
-            if (HeroController.SharedInstance != null)
+            if (Player.Instance != null)
             {
-                HeroController.SharedInstance.TakeSpikeDamage(damagePoints);
+                PlayerTakesDamage.Instance.TakeSpikeDamage(damagePoints);
             }
         }
     }
@@ -47,11 +47,11 @@ public class SpikeDamageTeleport : MonoBehaviour
 
     private void SendPlayerToLastGroundPosition()
     {
-        if (HeroController.SharedInstance.Health > 0)
+        if (HealthManager.Instance.Health > 0)
         {
-            
-            HeroController.SharedInstance.UpdatePosition(HeroController.SharedInstance.LastPositionOnGround);
-            Debug.Log("Debio respawnear en la posicion: " + HeroController.SharedInstance.LastPositionOnGround);
+
+            Player.Instance.ChangePosition(Player.Instance.LastPositionOnGround);
+            Debug.Log("Debio respawnear en la posicion: " + Player.Instance.LastPositionOnGround);
         }
     }
 

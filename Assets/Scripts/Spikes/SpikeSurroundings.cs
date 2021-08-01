@@ -22,7 +22,7 @@ public class SpikeSurroundings : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (spawnPoint != null)
-            HeroController.SharedInstance.LastPositionOnGround = spawnPoint.transform.position;
+            Player.Instance.LastPositionOnGround = spawnPoint.transform.position;
         else
             Debug.LogWarning("El spawnPoint es nulo");
     }

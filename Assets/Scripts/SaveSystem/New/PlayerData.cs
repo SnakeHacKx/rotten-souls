@@ -11,12 +11,12 @@ public class PlayerData
     public int health;
     public float[] position;
 
-    public PlayerData(HeroController player)
+    public PlayerData(Player player)
     {
         currentPowerUpID = player.CurrentPowerUpID;
         powerUpAmount = player.PowerUpAmount;
         coinsAmount = player.Coins;
-        health = player.Health;
+        health = HealthManager.Instance.Health;
 
         position = new float[3];
         position[0] = player.transform.position.x;

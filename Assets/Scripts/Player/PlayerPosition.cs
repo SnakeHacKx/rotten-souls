@@ -6,7 +6,7 @@ public class PlayerPosition : MonoBehaviour
 {
     void Start()
     {
-        print("START");
-        this.transform.position = GameManager.SharedInstance.lastCheckpointPos;
+        //print("START");
+        //this.transform.position = GameManager.SharedInstance.lastCheckpointPos;
     }
 }

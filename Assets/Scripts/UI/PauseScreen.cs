@@ -120,7 +120,7 @@ public class PauseScreen : MonoBehaviour
 
         //SceneHelper.SharedInstance.ReloadScene();
         GameManager.SharedInstance.HidePauseScreen();
-        HeroController.SharedInstance.SetIsControlable(true);
+        Player.Instance.SetIsControlable(true);
         //HeroController.SharedInstance.SetIsControlable(true);
         Destroy(this.gameObject);
     }

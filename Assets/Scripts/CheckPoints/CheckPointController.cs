@@ -11,7 +11,7 @@ public class CheckPointController : MonoBehaviour, ISaveGameScreen
     public void OnHideScreen()
     {
         screenIsShowing = false;
-        HeroController.SharedInstance.SetIsControlable(true);
+        Player.Instance.SetIsControlable(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

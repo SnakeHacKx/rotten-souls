@@ -19,7 +19,7 @@ public class HeartController : MonoBehaviour
 
         if (collision.gameObject.CompareTag(playerTag.ToString()))
         {
-            HeroController.SharedInstance.GiveHealthPoint();
+            HealthManager.Instance.GiveHealthPoint();
             AudioManager.SharedInstance.PlaySFX(pickSFX);
             Destroy(this.gameObject);
         }

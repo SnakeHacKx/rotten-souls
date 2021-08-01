@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StartPoint : MonoBehaviour
 {
-    private HeroController player;
+    private Player player;
     //private CameraFollow theCamera;
     //public Vector2 facingDirection = Vector2.zero;//el jugador mirará a la dirección correcta despues de entrar
     //o salir de un lugar
@@ -49,7 +49,7 @@ public class StartPoint : MonoBehaviour
         //Debug.Log("El punto correcto es el de arriba");
 
         Debug.Log("La posición en la que debería aparecer el jugador al cambiar de escena es: " + this.transform.position);
-        HeroController.SharedInstance.transform.position = this.transform.position;
+        Player.Instance.transform.position = this.transform.position;
         //Debug.Log("La posición que tomó el Player es: " + HeroController.SharedInstance.transform.position);
         //TeleportVirtualCamera.SharedInstance.GetComponent<TeleportVirtualCamera>();
         TeleportVirtualCamera.SharedInstance.ChangePosition(this.transform.position);

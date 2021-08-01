@@ -48,7 +48,7 @@ public class SceneHelper : MonoBehaviour
     public void RestartGame()
     {
         Debug.Log("He muerto sin haber guardado el juego, reiniciando el juego...");
-        HeroController.SharedInstance.SetPlayerToNewGameStatus();
+        Player.Instance.SetPlayerToNewGameStatus();
         SceneManager.LoadScene(SceneID.Greed1_1.ToString());
     }
 
@@ -57,7 +57,7 @@ public class SceneHelper : MonoBehaviour
         Debug.Log("El ultimo punto de guardado es: " + GameManager.SharedInstance.lastCheckpointScene);
         SceneManager.LoadScene(GameManager.SharedInstance.lastCheckpointScene.ToString());
         TeleportVirtualCamera.SharedInstance.ChangePosition(this.transform.position);
-        HeroController.SharedInstance.SetPlayerToDefaultStatus();
+        Player.Instance.SetPlayerToDefaultStatus();
     }
 
     public void LoadScene(SceneID sceneID)

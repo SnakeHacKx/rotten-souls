@@ -64,7 +64,7 @@ public class HellGatoController : MonoBehaviour, ITargetCombat
         }
         else
         {
-            MoveTo(HeroController.SharedInstance.transform.position);
+            MoveTo(Player.Instance.transform.position);
         }
 
         if (!rangeVision.isTouching)
@@ -111,14 +111,14 @@ public class HellGatoController : MonoBehaviour, ITargetCombat
 
             if(this.transform.right == Vector3.right)
             {
-                if (HeroController.SharedInstance.transform.position.x < this.transform.position.x)
+                if (Player.Instance.transform.position.x < this.transform.position.x)
                 {
                     Turn();
                 }
             }
             else
             {
-                if (HeroController.SharedInstance.transform.position.x > this.transform.position.x)
+                if (Player.Instance.transform.position.x > this.transform.position.x)
                 {
                     Turn();
                 }

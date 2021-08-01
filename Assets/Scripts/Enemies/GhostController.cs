@@ -63,8 +63,8 @@ public class GhostController : MonoBehaviour, ITargetCombat
 
     private void ChasePlayer()
     {
-        if (HeroController.SharedInstance != null)
-            MoveTo(HeroController.SharedInstance.transform.position);
+        if (Player.Instance != null)
+            MoveTo(Player.Instance.transform.position);
 
         if (!rangeVision.isTouching)
         {

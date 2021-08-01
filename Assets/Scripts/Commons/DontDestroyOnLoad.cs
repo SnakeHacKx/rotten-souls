@@ -10,7 +10,7 @@ public class DontDestroyOnLoad : MonoBehaviour
     void Start()
     {
         // si el player no ha sido creado, no lo destruyas al cambiar de escena
-        if (!HeroController.playerCreated)
+        if (!Player.playerCreated)
         {
             DontDestroyOnLoad(this.transform.gameObject);
         }

@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     {
         TitleScreenController.NewGameFromTitleScreen += HandleNewGame;
         TitleScreenController.ContinueGameFromTitleScreen += HandleContinueGame;
-        HeroController.HeroExists += HandleHeroIsNotNull;
+        Player.PlayerExists += HandleHeroIsNotNull;
         TitleScreenController.IsInMainMenu += SetActiveHeroAndCamera;
     }
 
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     {
         TitleScreenController.NewGameFromTitleScreen -= HandleNewGame;
         TitleScreenController.ContinueGameFromTitleScreen -= HandleContinueGame;
-        HeroController.HeroExists -= HandleHeroIsNotNull;
+        Player.PlayerExists -= HandleHeroIsNotNull;
         TitleScreenController.IsInMainMenu -= SetActiveHeroAndCamera;
     }
 
@@ -105,16 +105,16 @@ public class GameManager : MonoBehaviour
         //Debug.Log("****** El Hero ya no es nulo **********");
 
         if (continueWasPressed)
-            HeroController.SharedInstance.LoadPlayerStatus();
+            Player.Instance.LoadPlayerStatus();
         else if (newGameWasPressed)
-            HeroController.SharedInstance.SetPlayerToNewGameStatus();
+            Player.Instance.SetPlayerToNewGameStatus();
     }
 
     void HandleContinueGame()
     {
         Debug.Log("****** Se ha dado continue desde el tittle Screen **********");
 
-        if (HeroController.SharedInstance == null)
+        if (Player.Instance == null)
             print("Espectacular");
 
         continueWasPressed = true;
@@ -173,8 +173,8 @@ public class GameManager : MonoBehaviour
         }
 
         gameData.heroData.powerUpAmount = powerUpAmount;
-        gameData.heroData.coinsAmount = HeroController.SharedInstance.Coins;
-        gameData.heroData.health = HeroController.SharedInstance.Health;
+        gameData.heroData.coinsAmount = Player.Instance.Coins;
+        gameData.heroData.health = HealthManager.Instance.Health;
 
         //Debug.Log("Cantidad de espacio en el vector posicion del gameData: " + gameData.heroData.lastPosition.Length);
         gameData.heroData.lastPositionX = lastCheckpointPos.x;
@@ -228,21 +228,21 @@ public class GameManager : MonoBehaviour
 
     public void SavePlayer()
     {
-        SaveGameSystem.SavePlayer(HeroController.SharedInstance);
+        SaveGameSystem.SavePlayer(Player.Instance);
     }
 
     public void LoadPlayer()
     {
         PlayerData data = SaveGameSystem.LoadPlayer();
-        HeroController.SharedInstance.CurrentPowerUpID = data.currentPowerUpID;
-        HeroController.SharedInstance.Health = data.health;
-        HeroController.SharedInstance.PowerUpAmount = data.powerUpAmount;
-        HeroController.SharedInstance.Coins = data.coinsAmount;
+        Player.Instance.CurrentPowerUpID = data.currentPowerUpID;
+        HealthManager.Instance.Health = data.health;
+        Player.Instance.PowerUpAmount = data.powerUpAmount;
+        Player.Instance.Coins = data.coinsAmount;
 
         Vector3 position;
         position.x = data.position[0];
         position.y = data.position[1];
         position.z = data.position[2];
-        HeroController.SharedInstance.transform.position = position;
+        Player.Instance.transform.position = position;
     }
 }

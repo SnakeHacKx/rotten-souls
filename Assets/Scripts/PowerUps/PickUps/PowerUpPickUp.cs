@@ -24,7 +24,7 @@ public class PowerUpPickUp : MonoBehaviour
             var amount = Random.Range(5, maxAmount);
             
             GameManager.SharedInstance.UpdatePowerUp(powerUpID, GetComponentInChildren<SpriteRenderer>().sprite, amount);
-            HeroController.SharedInstance.ChangePowerUp(powerUpID, amount);
+            Player.Instance.ChangePowerUp(powerUpID, amount);
             AudioManager.SharedInstance.PlaySFX(pickSFX);
             Destroy(this.gameObject);
         }
