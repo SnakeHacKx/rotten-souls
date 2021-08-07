@@ -67,16 +67,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 // AQUI SE DEBERÍA AGREGAR UNA ANIMACION y COMPORTAMIENTO DE CUANDO ESTA ATACANDO
                 // Y CORRIENDO A LA MISMA VEZ
-                if (!Player.Instance.isAttacking) AnimatorController.Instance.Play(AnimationID.Run);
+                if (!Player.Instance.isAttacking) AnimatorController.Instance.Play(GlobalAnimID.Run.ToString());
             }
             else
             {
-                if (!Player.Instance.isAttacking) AnimatorController.Instance.Play(AnimationID.Idle);
+                if (!Player.Instance.isAttacking) AnimatorController.Instance.Play(GlobalAnimID.Idle.ToString());
             }
         }
         else if (Player.Instance.isFalling && !Player.Instance.isAttacking)
         {
-            AnimatorController.Instance.Play(AnimationID.Jump);
+            AnimatorController.Instance.Play(GlobalAnimID.Jump.ToString());
         }
     }
 }

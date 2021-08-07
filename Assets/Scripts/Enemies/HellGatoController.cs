@@ -94,7 +94,7 @@ public class HellGatoController : MonoBehaviour, ITargetCombat
 
     private void WalkInTransformRight()
     {
-        animatorController.Play(AnimationID.Run);
+        animatorController.Play(GlobalAnimID.Run.ToString());
 
         _rigidbody.velocity = new Vector2(this.transform.right.x * speed, _rigidbody.velocity.y);
 

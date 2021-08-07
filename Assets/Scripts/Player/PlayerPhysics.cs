@@ -25,6 +25,9 @@ public class PlayerPhysics : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Maneja el estado del jugador 
+    /// </summary>
     private void HandleIsGrounding()
     {
         if (!Player.Instance.canCheckGround) return;
@@ -54,6 +57,10 @@ public class PlayerPhysics : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Maneja la caida del jugador, o sea, cuando el jugador no toca el suelo y no 
+    /// esta saltando.
+    /// </summary>
     private void HandleFalling()
     {
         if (!Player.Instance.isOnGround && !Player.Instance.isJumping)

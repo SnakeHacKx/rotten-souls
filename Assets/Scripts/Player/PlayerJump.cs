@@ -82,12 +82,12 @@ public class PlayerJump : MonoBehaviour
         Player.Instance.isFalling = false;
 
         if (!Player.Instance.isAttacking)
-            AnimatorController.Instance.Play(AnimationID.PrepareJump);
+            AnimatorController.Instance.Play(GlobalAnimID.PrepareJump.ToString());
 
         yield return new WaitForSeconds(0.1f); // retraso de 0.3 segundos
 
         if (!Player.Instance.isAttacking)
-            AnimatorController.Instance.Play(AnimationID.Jump);
+            AnimatorController.Instance.Play(GlobalAnimID.Jump.ToString());
 
         Player.Instance.canCheckGround = true;
     }

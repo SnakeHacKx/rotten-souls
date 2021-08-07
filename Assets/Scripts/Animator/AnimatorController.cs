@@ -3,19 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum AnimationID
+public enum PlayerAnimID
+{
+    UsePowerUp = 0
+}
+
+public enum GlobalAnimID
 {
     Idle = 0,
     Run = 1,
-    PrepareJump = 2,
-    Jump = 3,
-    Attack = 4,
-    Hurt = 5,
-    UsePowerUp = 6,
-    Rise = 7,
-    Walk = 8,
-    LookAtTarget = 9,
-    Thunder = 10
+    Attack = 2,
+    Hurt = 3,
+    Walk = 4,
+    PrepareJump = 5,
+    Jump = 6,
+}
+
+public enum AndroMaliusAnimID
+{
+    LookAtTarget = 0,
+    Thunder = 1
+}
+
+public enum NormalEnemyAnimID
+{
+    Rise = 0
 }
 
 public class AnimatorController : MonoBehaviour
@@ -45,8 +57,10 @@ public class AnimatorController : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    // Se encarga de reproducir las animaciones
-    public void Play(AnimationID animationID)
+    /// <summary>
+    /// Se encarga de reproducir las animaciones
+    /// </summary>
+    public void Play(string animationID)
     {
         if (_animator == null)
         {
@@ -54,9 +68,12 @@ public class AnimatorController : MonoBehaviour
         }
 
         // todo: activar/desactivar animaciones
-        _animator.Play(animationID.ToString());
+        _animator.Play(animationID);
     }
 
+    /// <summary>
+    /// Pausa una animacion
+    /// </summary>
     public void Pause()
     {
         if(_animator == null)
@@ -67,6 +84,9 @@ public class AnimatorController : MonoBehaviour
         _animator.speed = 0;
     }
 
+    /// <summary>
+    /// Reanuda una animacion
+    /// </summary>
     public void Unpause()
     {
         if (_animator == null)

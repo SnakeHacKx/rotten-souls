@@ -129,10 +129,10 @@ public class PlayerTakesDamage : MonoBehaviour
         Player.Instance.canMove = false;
         Player.Instance.canFlip = false;
        
-        AnimatorController.Instance.Play(AnimationID.Hurt);
+        AnimatorController.Instance.Play(GlobalAnimID.Hurt.ToString());
         SpikeDamageImpulse();
         yield return new WaitForSeconds(0.5f);
-        AnimatorController.Instance.Play(AnimationID.Idle);
+        AnimatorController.Instance.Play(GlobalAnimID.Idle.ToString());
         
         Player.Instance.canMove = true;
         Player.Instance.canFlip = true;
@@ -155,7 +155,7 @@ public class PlayerTakesDamage : MonoBehaviour
         Player.Instance.canMove = false;
         Player.Instance.canFlip = false;
 
-        AnimatorController.Instance.Play(AnimationID.Hurt);
+        AnimatorController.Instance.Play(GlobalAnimID.Hurt.ToString());
         yield return new WaitForSeconds(0.2f);
 
         Player.Instance.canMove = true;

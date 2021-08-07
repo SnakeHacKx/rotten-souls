@@ -54,6 +54,10 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Se encarga de reproducir los efectos de sonido
+    /// </summary>
+    /// <param name="audioClip">Pista de efecto de sonido.</param>
     public void PlaySFX(AudioClip audioClip)
     {
         // Reproduce el audio una sola vez
@@ -61,6 +65,10 @@ public class AudioManager : MonoBehaviour
             sfxAudioSource.PlayOneShot(audioClip);
     }
     
+    /// <summary>
+    /// Se encarga de reproducir musica
+    /// </summary>
+    /// <param name="audioClip">Pista de musica.</param>
     public void PlayMusic(AudioClip audioClip)
     {
         // Para evitar que se repita
@@ -74,7 +82,6 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log("POS DEL PLAYER EN AUDIO MANAGER: " + HeroController.SharedInstance.transform.position);  
         // si esto se cumple es porque el usuario modificó la música
         // se reasigna para que no haya problemas
         if(musicVolume != _musicVolume)

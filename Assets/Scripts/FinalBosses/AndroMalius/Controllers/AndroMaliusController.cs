@@ -122,7 +122,7 @@ public class AndroMaliusController : MonoBehaviour, ITargetCombat
     {
 
         yield return new WaitForSeconds(0.4f);
-        animatorController.Play(AnimationID.Idle);
+        animatorController.Play(GlobalAnimID.Idle.ToString());
         var direction = new Vector3(-38, -23, 0) - this.transform.position;
 
         canFloat = false;
@@ -177,7 +177,7 @@ public class AndroMaliusController : MonoBehaviour, ITargetCombat
     IEnumerator _LaunchProjectiles()
     {
         yield return new WaitForSeconds(0.4f);
-        animatorController.Play(AnimationID.LookAtTarget);
+        animatorController.Play(AndroMaliusAnimID.LookAtTarget.ToString());
 
         yield return new WaitForSeconds(0.4f);
         for (int i = 0; i < 5; i++)
@@ -189,14 +189,14 @@ public class AndroMaliusController : MonoBehaviour, ITargetCombat
 
             yield return new WaitForSeconds(0.6f);
 
-            animatorController.Play(AnimationID.Attack);
+            animatorController.Play(GlobalAnimID.Attack.ToString());
             yield return new WaitForSeconds(0.2f);
 
             var projectile = Instantiate(projectilePrefab, projectilePivot.transform.position, Quaternion.identity);
             projectile.GetComponent<Rigidbody2D>().AddForce(direction * projectileForce, ForceMode2D.Impulse);
             yield return new WaitForSeconds(0.3f);
 
-            animatorController.Play(AnimationID.LookAtTarget);
+            animatorController.Play(AndroMaliusAnimID.LookAtTarget.ToString());
             feedbackProjectile.SetActive(false);
 
             yield return new WaitForSeconds(1f);
@@ -229,7 +229,7 @@ public class AndroMaliusController : MonoBehaviour, ITargetCombat
 
     IEnumerator MoveInScenarioCoroutine()
     {
-        animatorController.Play(AnimationID.LookAtTarget);
+        animatorController.Play(AndroMaliusAnimID.LookAtTarget.ToString());
         var target = wayPointsManager.GetRandomPoint();
 
         yield return new WaitForSeconds(0.4f);
@@ -255,7 +255,7 @@ public class AndroMaliusController : MonoBehaviour, ITargetCombat
             androiMaliusState = AndroiMaliusState.LaunchProjectiles;
 
         }
-        animatorController.Play(AnimationID.Idle);
+        animatorController.Play(GlobalAnimID.Idle.ToString());
 
         stateExecuted = false;
 

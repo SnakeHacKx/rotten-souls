@@ -38,7 +38,7 @@ public class PlayerMaleeAttack : MonoBehaviour
             if (Player.Instance.isOnGround) _rigidbody.velocity = Vector2.zero;
 
             AudioManager.SharedInstance.PlaySFX(attackSFX);
-            AnimatorController.Instance.Play(AnimationID.Attack);
+            AnimatorController.Instance.Play(GlobalAnimID.Attack.ToString());
             Player.Instance.isAttacking = true;
             _swordController.Attack(_delayAttack, _attackDuration);
 
@@ -46,6 +46,10 @@ public class PlayerMaleeAttack : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Corrutina del ataque, se extiende desde que el personaje tiene la espada en
+    /// la distancia maxima del ataque, hasta que la esconde y vuelve al Idle
+    /// </summary>
     IEnumerator RestoreAttack()
     {
         if (Player.Instance.isOnGround) Player.Instance.canMove = false;

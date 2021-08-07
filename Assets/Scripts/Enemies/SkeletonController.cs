@@ -55,7 +55,7 @@ public class SkeletonController : MonoBehaviour, ITargetCombat
 
     private void WalkInTransformRight()
     {
-        animatorController.Play(AnimationID.Walk);
+        animatorController.Play(GlobalAnimID.Walk.ToString());
 
         //_rigidbody.velocity = transform.right * speed;
         _rigidbody.velocity = new Vector2(transform.right.x * speed, _rigidbody.velocity.y);
@@ -90,7 +90,7 @@ public class SkeletonController : MonoBehaviour, ITargetCombat
     {
         //yield return new WaitForSeconds(0.2f);
 
-        animatorController.Play(AnimationID.Rise);
+        animatorController.Play(NormalEnemyAnimID.Rise.ToString());
 
         yield return new WaitForSeconds(0.55f);
 

@@ -10,7 +10,7 @@ public class CameraManager : MonoBehaviour
 
     private static CameraManager _sharedInstance;
    
-    public static CameraManager SharedInstance
+    public static CameraManager Instance
     {
         get
         {

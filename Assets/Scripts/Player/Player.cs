@@ -144,7 +144,7 @@ public class Player : MonoBehaviour
         canFlip = true;
         
         // Animacion "Idle" al iniciar
-        _animatorController.Play(AnimationID.Idle);
+        _animatorController.Play(GlobalAnimID.Idle.ToString());
 
         PlayerExists?.Invoke();
     }
@@ -170,7 +170,7 @@ public class Player : MonoBehaviour
     /// </summary>
     public void SetIdleAnimation()
     {
-        _animatorController.Play(AnimationID.Idle);
+        _animatorController.Play(GlobalAnimID.Idle.ToString());
     }
 
     /// <summary>
@@ -184,7 +184,7 @@ public class Player : MonoBehaviour
         _healthManager.Health = _healthManager.InitialHealth;
         Coins = 0;
         PowerUpAmount = 0;
-        _animatorController.Play(AnimationID.Idle);
+        _animatorController.Play(GlobalAnimID.Idle.ToString());
         _currentPowerUp = PowerUpID.Nothing;
     }
 
@@ -199,7 +199,7 @@ public class Player : MonoBehaviour
         _healthManager.Health = _healthManager.MaxHealth;
         Coins = 0;
         PowerUpAmount = 0;
-        _animatorController.Play(AnimationID.Idle);
+        _animatorController.Play(GlobalAnimID.Idle.ToString());
         _currentPowerUp = PowerUpID.Nothing;
     }
 
@@ -253,7 +253,7 @@ public class Player : MonoBehaviour
         if (!this.isControlable)
         {
             StopAllCoroutines();
-            _animatorController.Play(AnimationID.Idle);
+            _animatorController.Play(GlobalAnimID.Idle.ToString());
             _rigidbody.velocity = Vector2.zero;
         }
     }

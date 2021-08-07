@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
     {
         //Debug.Log("El hero y camara se activaran?: " + active);
         player.SetActive(active);
-        CameraManager.SharedInstance.SetActiveBackground(active);
+        CameraManager.Instance.SetActiveBackground(active);
     }
 
     void HandleHeroIsNotNull()
