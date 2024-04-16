@@ -180,7 +180,7 @@ TextureImporter:
       213: -5730562116521026069
     second: PlayStation 2 - Chaos Wars - Weapons_58
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -200,6 +200,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -209,8 +211,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -231,10 +233,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -250,6 +256,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1512,6 +1542,66 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      PlayStation 2 - Chaos Wars - Weapons_0: -5048099183019273450
+      PlayStation 2 - Chaos Wars - Weapons_1: -7415351580650280731
+      PlayStation 2 - Chaos Wars - Weapons_10: -147610788885685899
+      PlayStation 2 - Chaos Wars - Weapons_11: -6307061809329666490
+      PlayStation 2 - Chaos Wars - Weapons_12: 2405754457822567200
+      PlayStation 2 - Chaos Wars - Weapons_13: -1591799813162545694
+      PlayStation 2 - Chaos Wars - Weapons_14: -8245247414241355706
+      PlayStation 2 - Chaos Wars - Weapons_15: 6890914090072034032
+      PlayStation 2 - Chaos Wars - Weapons_16: -3952709119944340044
+      PlayStation 2 - Chaos Wars - Weapons_17: -5412829452888282874
+      PlayStation 2 - Chaos Wars - Weapons_18: -9163209458069851872
+      PlayStation 2 - Chaos Wars - Weapons_19: 4691173374307173217
+      PlayStation 2 - Chaos Wars - Weapons_2: -7500918334951540953
+      PlayStation 2 - Chaos Wars - Weapons_20: 117013716922913003
+      PlayStation 2 - Chaos Wars - Weapons_21: -101864672186087636
+      PlayStation 2 - Chaos Wars - Weapons_22: -2914095076450933874
+      PlayStation 2 - Chaos Wars - Weapons_23: 5278092642623164841
+      PlayStation 2 - Chaos Wars - Weapons_24: -8772552138605464671
+      PlayStation 2 - Chaos Wars - Weapons_25: -6534538509171050371
+      PlayStation 2 - Chaos Wars - Weapons_26: -3150323386190372175
+      PlayStation 2 - Chaos Wars - Weapons_27: 3104424386806907876
+      PlayStation 2 - Chaos Wars - Weapons_28: 4812012913422197248
+      PlayStation 2 - Chaos Wars - Weapons_29: -1813993847858213391
+      PlayStation 2 - Chaos Wars - Weapons_3: 3490064728942641636
+      PlayStation 2 - Chaos Wars - Weapons_30: -2779229680292593515
+      PlayStation 2 - Chaos Wars - Weapons_31: 3018476795281928540
+      PlayStation 2 - Chaos Wars - Weapons_32: -4980417424209417198
+      PlayStation 2 - Chaos Wars - Weapons_33: -7145608619721360860
+      PlayStation 2 - Chaos Wars - Weapons_34: -1546205698210087438
+      PlayStation 2 - Chaos Wars - Weapons_35: 402550079070345772
+      PlayStation 2 - Chaos Wars - Weapons_36: -3042079590173750241
+      PlayStation 2 - Chaos Wars - Weapons_37: -6746634192580320992
+      PlayStation 2 - Chaos Wars - Weapons_38: 7421832976034004441
+      PlayStation 2 - Chaos Wars - Weapons_39: 3297853451227448231
+      PlayStation 2 - Chaos Wars - Weapons_4: 4609208674211017138
+      PlayStation 2 - Chaos Wars - Weapons_40: -7468967293253748679
+      PlayStation 2 - Chaos Wars - Weapons_41: -9037504343150317595
+      PlayStation 2 - Chaos Wars - Weapons_42: 6137840307296865988
+      PlayStation 2 - Chaos Wars - Weapons_43: 7059774574737931453
+      PlayStation 2 - Chaos Wars - Weapons_44: 4578915318732695066
+      PlayStation 2 - Chaos Wars - Weapons_45: 3907434544379949073
+      PlayStation 2 - Chaos Wars - Weapons_46: 5370857239458118145
+      PlayStation 2 - Chaos Wars - Weapons_47: -6997249216315989621
+      PlayStation 2 - Chaos Wars - Weapons_48: -8340326077076497351
+      PlayStation 2 - Chaos Wars - Weapons_49: -1359617896429725707
+      PlayStation 2 - Chaos Wars - Weapons_5: 4816253778658578181
+      PlayStation 2 - Chaos Wars - Weapons_50: -8212877408813700127
+      PlayStation 2 - Chaos Wars - Weapons_51: 1565126442518465816
+      PlayStation 2 - Chaos Wars - Weapons_52: -8019522018282520579
+      PlayStation 2 - Chaos Wars - Weapons_53: 7817583837157906935
+      PlayStation 2 - Chaos Wars - Weapons_54: -4521178997479240808
+      PlayStation 2 - Chaos Wars - Weapons_55: -4055619019163307389
+      PlayStation 2 - Chaos Wars - Weapons_56: 8486916450631933196
+      PlayStation 2 - Chaos Wars - Weapons_57: -4565370707742538724
+      PlayStation 2 - Chaos Wars - Weapons_58: -5730562116521026069
+      PlayStation 2 - Chaos Wars - Weapons_6: 4749402694881645270
+      PlayStation 2 - Chaos Wars - Weapons_7: 7489459496180409630
+      PlayStation 2 - Chaos Wars - Weapons_8: -8030313074576054114
+      PlayStation 2 - Chaos Wars - Weapons_9: -1045109502362322580
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
