@@ -3774,8 +3774,8 @@ MonoBehaviour:
   finalBoss: {fileID: 0}
   confinerTag: 5
   cameraSize: 0
-  levelBackground: {fileID: 21300000, guid: fe540f63816ffff4cbf98cc48b65bf45, type: 3}
-  backgroundScale: {x: 1.15, y: 1.15, z: 0}
+  levelBackground: {fileID: 21300000, guid: d345ad4d70981410697bd7d26bedb6bb, type: 3}
+  backgroundScale: {x: 1.2, y: 1.2, z: 0}
 --- !u!4 &1757707462
 Transform:
   m_ObjectHideFlags: 0
