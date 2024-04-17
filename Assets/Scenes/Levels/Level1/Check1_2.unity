@@ -953,7 +953,7 @@ PrefabInstance:
     - target: {fileID: 8734437813799021775, guid: f68e80bf6dd6fb14495b8e7af8f52198,
         type: 3}
       propertyPath: npcName
-      value: Angry Hornet
+      value: Hornet
       objectReference: {fileID: 0}
     - target: {fileID: 8734437813799021775, guid: f68e80bf6dd6fb14495b8e7af8f52198,
         type: 3}

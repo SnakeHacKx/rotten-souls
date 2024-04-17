@@ -63156,7 +63156,7 @@ PrefabInstance:
     - target: {fileID: 7351871415555047424, guid: cb4f5b0c3119ea54a90843bc5268a3f8,
         type: 3}
       propertyPath: npcName
-      value: Dark Monge
+      value: Monje Oscuro
       objectReference: {fileID: 0}
     - target: {fileID: 7351871415555047424, guid: cb4f5b0c3119ea54a90843bc5268a3f8,
         type: 3}

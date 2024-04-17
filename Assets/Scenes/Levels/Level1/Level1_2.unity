@@ -14310,6 +14310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8734437813799021775, guid: 94f9bdb5b4662e34ea09c9b733ddb6ce,
         type: 3}
+      propertyPath: npcName
+      value: Gerrero
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734437813799021775, guid: 94f9bdb5b4662e34ea09c9b733ddb6ce,
+        type: 3}
       propertyPath: npcDialogueLines.Array.size
       value: 2
       objectReference: {fileID: 0}
