@@ -6,20 +6,17 @@ using UnityEngine;
 public class HeroController : MonoBehaviour, ITargetCombat
 {
     public delegate void _HeroExists();
+
     public static event _HeroExists HeroExists;
 
-    [Header("Power Ups")]
-    [SerializeField] private PowerUpID currentPowerUp;
+    [Header("Power Ups")] [SerializeField] private PowerUpID currentPowerUp;
     [SerializeField] SpellLauncherController bluePotionLauncher;
     [SerializeField] SpellLauncherController redPotionLauncher;
     [SerializeField] private int _powerUpAmount;
 
     public int PowerUpAmount
     {
-        get
-        {
-            return _powerUpAmount;
-        }
+        get { return _powerUpAmount; }
         set
         {
             if (_powerUpAmount != value)
@@ -27,68 +24,69 @@ public class HeroController : MonoBehaviour, ITargetCombat
                 //print("Debio actualizarse el numero de power ups");
                 GameManager.SharedInstance.UpdatePowerUp(value);
             }
+
             _powerUpAmount = value;
         }
     }
 
-    [Header("Attack Variables")]
-    [SerializeField] SwordController swordController;
+    [Header("Attack Variables")] [SerializeField]
+    SwordController swordController;
+
     [SerializeField] float delayAttack;
     [SerializeField] float attackDuration;
 
     [Header("Health Variables")]
     // Patrón del observador
-    [SerializeField] private int initialHealh;
+    [SerializeField]
+    private int initialHealh;
+
     [SerializeField] private int _health = 0; // variable de apollo
 
     public int Health
     {
-        get
-        {
-            return _health;
-        }
+        get { return _health; }
         set
         {
             if (_health != value)
             {
                 GameManager.SharedInstance.UpdateHealth(value);
             }
+
             _health = value;
         }
     }
 
     [SerializeField] private DamageFeedbackEffect damageFeedbackEffect;
 
-    [Header("Animation Variables")]
-    [SerializeField] private AnimatorController animatorController;
+    [Header("Animation Variables")] [SerializeField]
+    private AnimatorController animatorController;
 
-    [Header("Checker Variables")]
-    [SerializeField] private LayerChecker footA;
+    [Header("Checker Variables")] [SerializeField]
+    private LayerChecker footA;
+
     [SerializeField] private LayerChecker footB;
 
-    [Header("Interruption Variables")]
-    public bool canCheckGround;
+    [Header("Interruption Variables")] public bool canCheckGround;
     public bool canMove;
     public bool canFlip;
 
-    [Header("Boolean Variables")]
-    public bool canDoubleJump;
+    [Header("Boolean Variables")] public bool canDoubleJump;
     public bool playerIsAttacking;
     public bool playerIsRecovering;
     public bool isLookingRight;
     public bool playerIsUsingPowerUp;
     public bool playerIsFalling;
 
-    [Header("Rigid Variables")]
-    [SerializeField] private float speed;
+    [Header("Rigid Variables")] [SerializeField]
+    private float speed;
+
     [SerializeField] private float jumpForce;
     [SerializeField] private float doubleJumpForce;
     [SerializeField] private float damageForce; // fuerza de repulsión cuando somos golpeados
     [SerializeField] private float damageForceUp;
     [SerializeField] private float spikeDamageForceUp;
 
-    [Header("Audio")]
-    [SerializeField] private AudioClip attackSFX;
+    [Header("Audio")] [SerializeField] private AudioClip attackSFX;
     [SerializeField] private AudioClip healthUpSFX;
 
     // Control Variables
@@ -105,26 +103,29 @@ public class HeroController : MonoBehaviour, ITargetCombat
 
     private Vector3 lastPositionOnGround;
 
-    public Vector3 LastPositionOnGround { get { return lastPositionOnGround; } set { lastPositionOnGround = value; } }
+    public Vector3 LastPositionOnGround
+    {
+        get { return lastPositionOnGround; }
+        set { lastPositionOnGround = value; }
+    }
 
-    [Tooltip("Tiempo máximo en el que será válido que el usuario presione el botón de saltar")]
-    [SerializeField] private float jumpTime;
+    [Tooltip("Tiempo máximo en el que será válido que el usuario presione el botón de saltar")] [SerializeField]
+    private float jumpTime;
+
     private float jumpTimeCounter;
 
     private int _coins = -1;
 
     public int Coins
     {
-        get
-        {
-            return _coins;
-        }
+        get { return _coins; }
         set
         {
             if (_coins != value)
             {
                 GameManager.SharedInstance.UpdateCoins(value);
             }
+
             _coins = value;
         }
     }
@@ -148,16 +149,13 @@ public class HeroController : MonoBehaviour, ITargetCombat
             // Debug.Log("Posición del player en su instancia: " + _sharedInstance.transform.position);
             if (_sharedInstance == null)
             {
-
                 _sharedInstance = FindObjectOfType<HeroController>();
                 //DontDestroyOnLoad(_sharedInstance);
             }
+
             return _sharedInstance;
         }
-        set
-        {
-            _sharedInstance = value;
-        }
+        set { _sharedInstance = value; }
     }
 
     private void Awake()
@@ -272,7 +270,7 @@ public class HeroController : MonoBehaviour, ITargetCombat
         Coins = 0;
         PowerUpAmount = 0;
         currentPowerUp = PowerUpID.Nothing;
-        
+
         //Debug.Log("LA VIDA EN NEW GAME ES DE: " + Health.ToString());
     }
 
@@ -310,7 +308,7 @@ public class HeroController : MonoBehaviour, ITargetCombat
     }
 
     private void PutOnLastCheckpointPosition()
-    {   
+    {
         this.transform.position = GameManager.SharedInstance.GetLastCheckpointPosition();
         TeleportVirtualCamera.SharedInstance.ChangePosition(GameManager.SharedInstance.GetLastCheckpointPosition());
         Debug.Log("Posición de reaparición: " + GameManager.SharedInstance.GetLastCheckpointPosition());
@@ -406,20 +404,20 @@ public class HeroController : MonoBehaviour, ITargetCombat
                 if (!playerIsAttacking) animatorController.Play(AnimationID.Idle);
             }
         }
-        else if (playerIsFalling && !playerIsAttacking) 
-        { 
+        else if (playerIsFalling && !playerIsAttacking)
+        {
             animatorController.Play(AnimationID.Jump);
         }
     }
 
     private void HandleFalling()
     {
-        if(!playerIsOnGround && !isJumping)
+        if (!playerIsOnGround && !isJumping)
         {
             playerIsFalling = true;
         }
-        
-        if(playerIsOnGround || isJumping)
+
+        if (playerIsOnGround || isJumping)
         {
             playerIsFalling = false;
         }
@@ -429,16 +427,18 @@ public class HeroController : MonoBehaviour, ITargetCombat
     {
         if (!canFlip) return;
 
-        if (_rigidbody.velocity.magnitude > 0)
+        if (_rigidbody.velocity.magnitude >= 1)
         {
             if (_rigidbody.velocity.x > 0)
             {
-                this.transform.rotation = Quaternion.Euler(0, 0, 0);
+                
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 isLookingRight = true;
             }
             else if (_rigidbody.velocity.x < 0)
             {
-                this.transform.rotation = Quaternion.Euler(0, 180, 0);
+                
+                transform.rotation = Quaternion.Euler(0, 180, 0);
                 isLookingRight = false;
             }
         }
@@ -447,7 +447,7 @@ public class HeroController : MonoBehaviour, ITargetCombat
     private void HandleJump()
     {
         // Doble Salto
-        if(canDoubleJump && jumpPressed && !playerIsOnGround)
+        if (canDoubleJump && jumpPressed && !playerIsOnGround)
         {
             this._rigidbody.velocity = Vector2.zero;
             this._rigidbody.AddForce(Vector2.up * doubleJumpForce, ForceMode2D.Impulse);
@@ -466,7 +466,7 @@ public class HeroController : MonoBehaviour, ITargetCombat
             // Comienza la corrutina del salto
             StartCoroutine(HandleJumpAnimation());
 
-            canDoubleJump = true; 
+            canDoubleJump = true;
         }
 
         if (jumpTimeCounter > 0 && isJumping == true)
@@ -513,7 +513,7 @@ public class HeroController : MonoBehaviour, ITargetCombat
     {
         if (attackPressed && !playerIsAttacking)
         {
-            if(playerIsOnGround) _rigidbody.velocity = Vector2.zero;
+            if (playerIsOnGround) _rigidbody.velocity = Vector2.zero;
 
             AudioManager.SharedInstance.PlaySFX(attackSFX);
             animatorController.Play(AnimationID.Attack);
@@ -531,7 +531,7 @@ public class HeroController : MonoBehaviour, ITargetCombat
 
         yield return new WaitForSeconds(0.35f); // El ataque durará 3s
         playerIsAttacking = false;
-        
+
         canMove = true;
     }
 
@@ -541,13 +541,14 @@ public class HeroController : MonoBehaviour, ITargetCombat
         _rigidbody.velocity = Vector2.zero;
         this.transform.position = position;
 
-        
+
         //Debug.Log("La velocidad del jugador debería ser 0");
     }
 
     private void HandleUsePowerUp()
     {
-        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Joystick1Button1)) && !playerIsUsingPowerUp && currentPowerUp != PowerUpID.Nothing)
+        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Joystick1Button1)) && !playerIsUsingPowerUp &&
+            currentPowerUp != PowerUpID.Nothing)
         {
             if (playerIsOnGround) _rigidbody.velocity = Vector2.zero;
 
@@ -555,7 +556,7 @@ public class HeroController : MonoBehaviour, ITargetCombat
             animatorController.Play(AnimationID.UsePowerUp);
             playerIsUsingPowerUp = true;
 
-            if(currentPowerUp == PowerUpID.BluePotion)
+            if (currentPowerUp == PowerUpID.BluePotion)
             {
                 // el tranform.right es en realidad el eje X, o sea, la flecha roja que aparece en unity
                 bluePotionLauncher.Launch((Vector2)this.transform.right + Vector2.up * 0.3f);
@@ -564,7 +565,6 @@ public class HeroController : MonoBehaviour, ITargetCombat
             if (currentPowerUp == PowerUpID.RedPotion)
             {
                 redPotionLauncher.Launch(this.transform.right);
-
             }
 
 
@@ -572,7 +572,7 @@ public class HeroController : MonoBehaviour, ITargetCombat
 
             PowerUpAmount--;
 
-            if(PowerUpAmount <= 0)
+            if (PowerUpAmount <= 0)
             {
                 currentPowerUp = PowerUpID.Nothing;
             }
@@ -613,10 +613,10 @@ public class HeroController : MonoBehaviour, ITargetCombat
                     SceneHelper.SharedInstance.RestartGame();
                     return;
                 }
-                
+
                 SceneHelper.SharedInstance.GoToLastCheckPoint();
             }
-            
+
             //Debug.LogFormat("2. Se empezara a recobrar el player, no debería recibir daño");
             StartCoroutine(StartPlayerRecover());
             DamageImpulse();
@@ -658,6 +658,7 @@ public class HeroController : MonoBehaviour, ITargetCombat
                 Debug.Log("Mori y spawnee en el ultimo checkpoint...");
                 return;
             }
+
             PlayerTakeSpikeDamage();
             playerIsTakingDamage = false;
             Debug.Log("En este momento me pueden volver a hacer dano");
@@ -714,7 +715,6 @@ public class HeroController : MonoBehaviour, ITargetCombat
 
         playerIsRecovering = false;
         Debug.Log("EL player termino de recuperarse");
-        
     }
 
     IEnumerator StartPlayerRecover()
