@@ -35,5 +35,8 @@ public enum StartAndTeleportPointsID
 
     // Checks
     check1_1FromLevel1_2,
-    check1_2FromLevel1_3
+    check1_2FromLevel1_3,
+
+    // Thank You
+    thankYouFromLevel1_4,
 }

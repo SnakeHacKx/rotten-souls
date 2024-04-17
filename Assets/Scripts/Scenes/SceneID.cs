@@ -11,5 +11,6 @@ public enum SceneID
     Level1_4 = 0x010400,
     Level1_5 = 0x010500,
     Check1_1 = 0x000100,
-    Check1_2 = 0x000200
+    Check1_2 = 0x000200,
+    ThankYou = 0x000300,
 }
