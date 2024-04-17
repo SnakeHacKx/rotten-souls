@@ -6,31 +6,32 @@ using UnityEngine.EventSystems;
 public class TitleScreenController : MonoBehaviour
 {
     public delegate void _ContiueGame();
+
     public static event _ContiueGame ContinueGameFromTitleScreen;
 
     public delegate void _NewGame();
+
     public static event _NewGame NewGameFromTitleScreen;
 
     public delegate void _IsInMainMenu(bool activeHeroAndCamera);
+
     public static event _IsInMainMenu IsInMainMenu;
 
     public bool showOptions = false;
 
-    [Header("Buttons")]
-    public List<GameObject> optionButtons;
+    [Header("Buttons")] public List<GameObject> optionButtons;
     public GameObject pressEnterButton;
     public GameObject continueButton;
 
-    [Header("Audio")]
-    [SerializeField] AudioClip enterSfx;
+    [Header("Audio")] [SerializeField] AudioClip enterSfx;
     [SerializeField] AudioClip buttonSfx;
 
-    [Header("Control Menu")]
-    [SerializeField] GameObject mainMenuFirstButton;
+    [Header("Control Menu")] [SerializeField]
+    GameObject mainMenuFirstButton;
     // SI tengo otro menu dentro del menu, entonces elijo el boton que
     // quiere que se seleccione en ese nuevo menu
     // [SerializeField] GameObject optionFirstButton; 
-    
+
     // Cuando regresemos de ese menu, querremos que el boton que llevaba a ese menu
     // es el que esté seleccionado
     // [SerializeField] GameObject optionsClosedButton;
@@ -60,6 +61,7 @@ public class TitleScreenController : MonoBehaviour
             {
                 button.SetActive(true);
             }
+
             AudioManager.SharedInstance.PlaySFX(enterSfx);
 
             if (gameData != null)
@@ -90,7 +92,6 @@ public class TitleScreenController : MonoBehaviour
         AudioManager.SharedInstance.PlaySFX(buttonSfx);
 
         Application.Quit();
-
     }
 
     public void StartNewGame()
@@ -103,10 +104,15 @@ public class TitleScreenController : MonoBehaviour
         SceneHelper.SharedInstance.LoadScene(SceneID.Level1_1);
         IsInMainMenu?.Invoke(true);
 
-        if(HeroController.SharedInstance != null)
+        if (HeroController.SharedInstance != null)
         {
             HeroController.SharedInstance.SetPlayerToNewGameStatus();
         }
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneHelper.SharedInstance.LoadScene(SceneID.TitleScreen);
     }
 }
 
