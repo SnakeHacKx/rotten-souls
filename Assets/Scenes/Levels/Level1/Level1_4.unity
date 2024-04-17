@@ -63338,7 +63338,7 @@ PrefabInstance:
     - target: {fileID: 8241011414871965046, guid: 5727e469ca81eb04ba1706c19da6a62a,
         type: 3}
       propertyPath: sfxVolume
-      value: 0.09
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 8241011414871965046, guid: 5727e469ca81eb04ba1706c19da6a62a,
         type: 3}

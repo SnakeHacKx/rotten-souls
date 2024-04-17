@@ -374,6 +374,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero
       objectReference: {fileID: 0}
+    - target: {fileID: 6532369217237428819, guid: 0fdddded9e1b1e44a8a83ca3df137d64,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6532369217237428823, guid: 0fdddded9e1b1e44a8a83ca3df137d64,
         type: 3}
       propertyPath: m_RootOrder
@@ -39914,7 +39919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &969008781
 RectTransform:
   m_ObjectHideFlags: 0
@@ -62978,7 +62983,7 @@ PrefabInstance:
     - target: {fileID: 4531892814016405075, guid: 50bec0a5ffaa63949a4a02475cf1b236,
         type: 3}
       propertyPath: sfxVolume
-      value: 0.09
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4531892814016405075, guid: 50bec0a5ffaa63949a4a02475cf1b236,
         type: 3}
