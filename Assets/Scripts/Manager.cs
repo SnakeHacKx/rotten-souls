@@ -17,6 +17,7 @@ public class Manager : MonoBehaviour
     {
         GameManager.SharedInstance.gameObject.SetActive(true);
         AudioManager.SharedInstance.gameObject.SetActive(true);
+        Application.targetFrameRate = 60;
         //HeroController.SharedInstance.gameObject.SetActive(true);
         //UIManager.SharedInstance.gameObject.SetActive(true);
     }
